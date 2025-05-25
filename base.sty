@@ -24,6 +24,8 @@
 \RequirePackage{lettrine}
 \RequirePackage[object=vectorian]{pgfornament}
 \RequirePackage{tabularx}
+\RequirePackage{fancyhdr}
+
 \definecolor{Eblue}{HTML}{303c94}
 \definecolor{Ecyan}{HTML}{4CB9E7}
 \definecolor{Comment}{HTML}{5C469C}
@@ -32,10 +34,17 @@
 \definecolor{codepurple}{HTML}{C62A88}
 \definecolor{backcolour}{HTML}{B9EDDD}
 
-% Redefine page style
+% Configuration de la pagination
 \makeatletter
-\let\ps@plain\ps@empty
+\let\ps@plain\ps@fancy % Restore plain style to use fancy
 \makeatother
+
+% Configuration du style de page avec pagination
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot[C]{\textbf{\thepage}} % Page number in center of footer in black
+\renewcommand{\headrulewidth}{0pt} % Remove header line
+\renewcommand{\footrulewidth}{0pt} % Remove footer line
 
 \newcommand{\pagedegarde}[4]{
 \pagestyle{empty}
