@@ -1,86 +1,111 @@
 \chapter{Presentation du projet :}
 
 \section{Problematique et presentation du projet}
-Avec la montee en puissance de la digitalisation, les etablissements educatifs doivent constamment s'adapter pour offrir à leurs etudiants des outils adaptes à leur reussite. Face à cet imperatif, Code 212 a identifie le besoin d'assurer une interaction constante et personnalisee afin de repondre efficacement aux questions frequentes des etudiants et de les assister dans leur parcours educatif.
+Avec l'explosion des medias numeriques et des plateformes d'information en ligne, l'analyse des sentiments exprimés par les utilisateurs dans leurs commentaires est devenue cruciale pour comprendre l'opinion publique. Face à ce besoin croissant, Code 212 a identifie l'opportunite de developper une application d'analyse de sentiments specialisee dans le traitement des commentaires de la plateforme Hespress, permettant d'extraire et d'analyser automatiquement les opinions et emotions exprimees par les lecteurs.
 
-\subsection{Contexte d'Apprentissage Numerique}
-Le contexte actuel de l'education est marque par un passage rapide au numerique. Cela requiert des moyens d'apprentissage qui soient non seulement flexibles mais aussi immediatement reactifs aux besoins des elèves.
+\subsection{Contexte des Medias Numeriques}
+Le paysage mediatique marocain a connu une transformation majeure avec l'emergence de plateformes d'information numeriques comme Hespress. Ces plateformes generent quotidiennement des milliers de commentaires d'utilisateurs, constituant une mine d'informations precieuse sur l'opinion publique et les sentiments de la population.
 
-\subsection{Besoin d'une Interaction Continue}
-À l'ère du numerique, où l'immediatete est devenue la norme, les etudiants s'attendent à obtenir rapidement des reponses à leurs questions. Un outil tel qu'un chatbot IA s'avère indispensable pour combler cet ecart entre les besoins des etudiants et les ressources disponibles.
+\subsection{Besoin d'Analyse Automatisee des Sentiments}
+L'analyse manuelle des commentaires sur les articles d'actualite etant impossible à grande echelle, il devient essentiel de disposer d'outils automatises capables de classifier et d'analyser les sentiments exprimés. Cette analyse permet aux journalistes, chercheurs et decideurs de mieux comprendre les reactions du public face aux evenements d'actualite.
 
 \section{Solution Proposee}
-Le chatbot IA represente une innovation centrale pour Code 212. Capable de dialoguer avec les etudiants en temps reel, il offre une assistance instantanee tout en optimisant les ressources pedagogiques du centre.
+L'application d'analyse de sentiments represente une innovation technologique pour Code 212. Capable d'extraire automatiquement les commentaires de Hespress et de les analyser en temps reel, elle offre une comprehension approfondie des opinions publiques tout en optimisant le processus d'analyse de donnees textuelles.
 
-\subsection{Le Chatbot IA}
-Le chatbot, dote d'intelligence artificielle, est programme pour comprendre et traiter les demandes des etudiants, fournissant des reponses claires et precises, et est même capable d'apprendre de ses interactions pour ameliorer continuellement son assistance.
+\subsection{L'Application d'Analyse de Sentiments}
+L'application, dotee d'intelligence artificielle avancee, est concue pour scraper automatiquement les commentaires de la plateforme Hespress, les traiter à travers un modèle de classification de sentiments pre-entraine, et presenter les resultats à travers une interface utilisateur moderne et intuitive.
 
-\subsection{Methodes de Developpement du Chatbot}
-Lors du developpement du chatbot, nous avions deux options principales : le fine-tuning et le Retrieval-Augmented Generation (RAG). Après une analyse approfondie des avantages et des inconvenients de chaque methode, nous avons opte pour la methode RAG.
+\subsection{Architecture Technologique}
+Notre solution s'appuie sur une architecture microservices moderne et robuste, integrant plusieurs technologies de pointe pour assurer performance, securite et scalabilite.
+\subsubsection{Frontend : Next.js}
+Next.js constitue le framework de choix pour le developpement de l'interface utilisateur de notre application.
 
-\subsubsection{Le Fine-Tuning}
-Le fine-tuning consiste à adapter un modèle de langage pre-entraîne à des tâches specifiques en le re-entraînant sur un ensemble de donnees supplementaires pertinentes.
-
-\paragraph{Avantages du Fine-Tuning}
+\paragraph{Avantages de Next.js}
 \begin{itemize}
-    \item \textbf{Adaptation specifique}: Permet d'adapter le modèle aux besoins precis en utilisant des donnees specifiques à notre domaine.
-    \item \textbf{Amelioration des performances}: Peut ameliorer la precision du modèle pour des tâches specifiques en integrant des nuances et des contextes particuliers.
+    \item \textbf{Rendu hybride}: Combine le rendu côte serveur (SSR) et la generation statique (SSG) pour des performances optimales.
+    \item \textbf{Optimisation automatique}: Optimisation automatique des images, du code et des performances pour une experience utilisateur fluide.
+    \item \textbf{Routing simplifie}: Système de routage base sur le système de fichiers, facilitant la navigation et l'organisation du code.
 \end{itemize}
 
-\paragraph{Inconvenients du Fine-Tuning}
+\subsubsection{Backend : FastAPI}
+FastAPI sert de framework principal pour le developpement de l'API backend de notre application.
+
+\paragraph{Avantages de FastAPI}
 \begin{itemize}
-    \item \textbf{Coût en ressources}: Le processus de fine-tuning peut être coûteux en termes de calcul et de temps, necessitant des ressources materielles importantes.
-    \item \textbf{Dependance aux donnees}: La qualite des resultats depend fortement de la qualite et de la quantite des donnees disponibles pour le re-entraînement.
-    \item \textbf{Maintenance complexe}: Necessite une mise à jour continue et une maintenance pour integrer les nouvelles informations et rester pertinent.
+    \item \textbf{Performance elevee}: Performances comparables à NodeJS et Go, grâce à la programmation asynchrone.
+    \item \textbf{Documentation automatique}: Generation automatique de documentation interactive avec Swagger UI.
+    \item \textbf{Validation automatique}: Validation automatique des donnees avec des messages d'erreur detailles.
 \end{itemize}
 
-\subsubsection{Le Retrieval-Augmented Generation (RAG)}
-RAG combine un modèle de recuperation d'informations et un modèle de generation de texte. Il fonctionne en recuperant des passages pertinents d'une base de donnees et en generant des reponses en s'appuyant sur ces passages.
+\subsubsection{Authentification : Keycloak}
+Keycloak assure la gestion complete de l'authentification et de l'autorisation de notre application.
 
-\paragraph{Avantages du RAG}
+\paragraph{Avantages de Keycloak}
 \begin{itemize}
-    \item \textbf{Accès à une large base de connaissances}: RAG permet d'acceder à une base de donnees etendue pour recuperer les informations les plus pertinentes, offrant ainsi des reponses plus precises et à jour.
-    \item \textbf{Reduction des coûts de calcul}: etant donne que le modèle genère des reponses basees sur des informations recuperees, il necessite moins de re-entraînement intensif, ce qui reduit les coûts en calcul et en temps.
-    \item \textbf{Scalabilite et flexibilite}: Facile à mettre à jour avec de nouvelles informations sans necessiter un re-entraînement complet du modèle.
+    \item \textbf{Securite enterprise}: Solution d'authentification robuste avec support des standards OAuth 2.0 et OpenID Connect.
+    \item \textbf{Gestion centralisee}: Gestion centralisee des utilisateurs, roles et permissions.
+    \item \textbf{Scalabilite}: Solution adaptee aux applications à grande echelle avec support du clustering.
 \end{itemize}
 
-\paragraph{Inconvenients du RAG}
+\subsubsection{Web Scraping : Selenium}
+Selenium permet l'extraction automatisee des commentaires depuis la plateforme Hespress.
+
+\paragraph{Avantages de Selenium}
 \begin{itemize}
-    \item \textbf{Complexite de mise en œuvre}: Integrer et optimiser un système RAG peut être plus complexe initialement par rapport au fine-tuning simple d'un modèle.
-    \item \textbf{Dependance à la base de donnees}: La qualite des reponses depend de la qualite et de la couverture de la base de donnees utilisee pour la recuperation des informations.
+    \item \textbf{Automation complete}: Automatisation complete des interactions avec les pages web dynamiques.
+    \item \textbf{Support multi-navigateurs}: Compatibilite avec tous les navigateurs modernes.
+    \item \textbf{Gestion du JavaScript}: Capacite à traiter les contenus generes dynamiquement par JavaScript.
 \end{itemize}
 
-\subsubsection{Pourquoi Nous Avons Choisi le RAG}
-Nous avons choisi la methode RAG en raison de ses nombreux avantages strategiques. La capacite d'acceder à une vaste base de connaissances et de fournir des reponses precises et actualisees etait cruciale pour nous. De plus, la reduction des coûts de calcul et la flexibilite de mise à jour ont ete des facteurs determinants, permettant une maintenance plus aisee et des mises à jour regulières sans necessiter un re-entraînement complet. Bien que la mise en œuvre initiale ait ete plus complexe, les benefices à long terme en termes de scalabilite et d'efficacite ont justifie notre choix pour la methode RAG.
+\subsubsection{Classification de Sentiments : CardiffNLP Twitter-XLM-RoBERTa}
+Le modèle CardiffNLP/twitter-xlm-roberta-base-sentiment constitue le cœur de notre système d'analyse de sentiments.
+
+\paragraph{Avantages du Modèle}
+\begin{itemize}
+    \item \textbf{Multilinguisme}: Modèle pre-entraine sur des donnees multilingues, ideal pour les textes en arabe, francais et anglais.
+    \item \textbf{Robustesse}: Architecture RoBERTa offrant une comprehension contextuelle avancee des textes.
+    \item \textbf{Specialisation sociale}: Entraine specifiquement sur des donnees de reseaux sociaux, adapte aux commentaires en ligne.
+\end{itemize}
+
+\subsubsection{API Gateway : Spring Cloud Gateway}
+Spring Cloud Gateway orchestre les communications entre les differents microservices de notre architecture.
+
+\paragraph{Avantages de Spring Gateway}
+\begin{itemize}
+    \item \textbf{Routage intelligent}: Routage dynamique des requêtes vers les microservices appropries.
+    \item \textbf{Resilience}: Mecanismes de circuit breaker et de retry pour une haute disponibilite.
+    \item \textbf{Observabilite}: Integration native avec les outils de monitoring et de tracing distribue.
+\end{itemize}
 
 
 \section{Tableau des fonctionnalitees}
-Nous presentons ici un tableau decrivant les solutions offertes par le chatbot et leur impact sur l'experience des etudiants.
+Nous presentons ici un tableau decrivant les fonctionnalites offertes par l'application d'analyse de sentiments et leur impact sur l'experience utilisateur.
 
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{|p{6cm}|p{10cm}|}
 \hline
-\textbf{Fonctionnalite} & \textbf{Description et Impact sur les etudiants} \\ \hline
-Reponses aux questions frequentes & Le chatbot fournit des reponses immediates aux interrogations des etudiants, facilitant l'apprentissage autonome et une meilleure comprehension des cours. \\ \hline
-Assistance pour les travaux pratiques & Il guide les etudiants dans la realisation de leurs travaux pratiques en offrant des conseils et des ressources utiles, ce qui contribue à approfondir leur comprehension et à ameliorer leur competence pratique. \\ \hline
-Gestion des ressources pedagogiques & Le chatbot aide à la navigation et à l'exploitation efficace des ressources pedagogiques mises à disposition, maximisant ainsi le temps d'etude et les resultats d'apprentissage. \\ \hline
-Support psychologique & À travers des interactions engageantes et empathiques, le chatbot peut proposer un soutien moral et motiver les etudiants, renforçant leur perseverance et leur engagement scolaire. \\ \hline
+\textbf{Fonctionnalite} & \textbf{Description et Impact} \\ \hline
+Extraction automatique de commentaires & L'application utilise Selenium pour extraire automatiquement les commentaires des articles Hespress, permettant une collecte de donnees en temps reel sans intervention manuelle. \\ \hline
+Analyse de sentiments en temps reel & Grace au modèle CardiffNLP, l'application classifie instantanement les commentaires en sentiments positifs, negatifs ou neutres, offrant une comprehension immediate de l'opinion publique. \\ \hline
+Interface utilisateur intuitive & L'interface Next.js propose une navigation fluide et des visualisations claires des resultats d'analyse, facilitant l'interpretation des donnees pour les utilisateurs finaux. \\ \hline
+Authentification securisee & L'integration Keycloak assure une gestion robuste des utilisateurs et des permissions, garantissant la securite et la confidentialite des donnees analysees. \\ \hline
+Architecture microservices & La separation en microservices avec Spring Gateway permet une scalabilite optimale et une maintenance facilitee du système. \\ \hline
 \end{tabular}
-\caption{Recapitulatif des fonctionnalites du chatbot IA et leur impact sur les etudiants de Code 212.}
-\label{tab:chatbotfeatures}
+\caption{Recapitulatif des fonctionnalites de l'application d'analyse de sentiments Hespress.}
+\label{tab:sentimentfeatures}
 \end{table}
 
 \section{Conduite du Projet}
-La conduite efficace du projet de developpement du chatbot IA est essentielle pour repondre aux exigences specifiques de Code 212. Cette section explore en detail les processus de conception, de planification et de developpement qui sous-tendent la creation du chatbot.
+La conduite efficace du projet de developpement de l'application d'analyse de sentiments est essentielle pour repondre aux exigences specifiques de Code 212. Cette section explore en detail les processus de conception, de planification et de developpement qui sous-tendent la creation de cette solution innovante.
 
 \subsection{Conception}
-La phase de conception est l'etape fondatrice du projet, où l'equipe fixe les objectifs du chatbot, identifie les fonctionnalites cles et elabore la structure generale de l'intelligence artificielle. Cette phase necessite une comprehension precise des besoins des etudiants qui seront les utilisateurs finaux. À ce stade, des ateliers de brainstorming, des enquêtes auprès des utilisateurs et des seances de feedback avec les principales parties prenantes sont utilises pour rassembler les exigences et pour esquisser les premiers prototypes de l'interface utilisateur. Les scenarios d'utilisation et les parcours utilisateurs sont meticuleusement elabores pour garantir que le chatbot est à la fois convivial et techniquement viable.
+La phase de conception est l'etape fondatrice du projet, où l'equipe fixe les objectifs de l'application d'analyse de sentiments, identifie les fonctionnalites cles et elabore l'architecture generale du système. Cette phase necessite une comprehension precise des besoins en analyse de donnees textuelles et des attentes des utilisateurs finaux. À ce stade, des ateliers de brainstorming, des etudes de marche sur les plateformes d'actualite et des seances de feedback avec les parties prenantes sont utilises pour rassembler les exigences et pour esquisser les premiers prototypes de l'interface utilisateur. Les scenarios d'utilisation pour l'extraction et l'analyse des commentaires sont meticuleusement elabores pour garantir que l'application est à la fois performante et techniquement viable.
 
 \subsection{Planification des Tâches}
-Une planification detaillee va de pair avec une conception reussie; elle s'attaque à la complexite du processus de developpement en ventilant le projet en petites tâches gerables. L'equipe du projet etablit un calendrier de realisation, determinant les dependances entre les tâches et en allouant les ressources necessaires. La methodologie Agile est souvent adoptee, permettant une flexibilite et une reactivite accrues face aux changements de scope ou aux retours des utilisateurs. La creation de sprints, la priorisation des backlogs et les revues regulières de sprint assurent que le projet reste sur la bonne voie et adapte aux exigences changeantes tout au long de son cycle de vie.
+Une planification detaillee va de pair avec une conception reussie; elle s'attaque à la complexite du processus de developpement en ventilant le projet en petites tâches gerables. L'equipe du projet etablit un calendrier de realisation, determinant les dependances entre les differents composants (scraping, analyse IA, frontend, backend) et en allouant les ressources necessaires. La methodologie Agile est adoptee, permettant une flexibilite et une reactivite accrues face aux changements de scope ou aux evolutions des modèles d'IA. La creation de sprints focuses sur chaque technologie (Selenium, FastAPI, Next.js, etc.), la priorisation des backlogs et les revues regulières de sprint assurent que le projet reste sur la bonne voie et s'adapte aux exigences changeantes tout au long de son cycle de vie.
 
 \subsection{Developpement et Integrations}
-Durant la phase de developpement, l'equipe met en œuvre la conception du chatbot en codant les differentes composantes logicielles. Les developpeurs intègrent l'intelligence artificielle, travaillent sur le traitement du langage naturel et l'apprentissage automatique pour offrir une experience utilisateur la plus authentique possible. La construction de l'infrastructure technique, comprenant des serveurs, des bases de donnees et l'integration avec les API existantes, est rigoureusement testee pour garantir son bon fonctionnement. Une serie exhaustive de tests—tests unitaires, tests d'integration et tests de charge—est realisee pour s'assurer que le système est robuste, evolutif et prêt pour le deploiement.
-Chacune de ces etapes est critique pour le succès du chatbot IA qui est cense non seulement interagir efficacement avec les utilisateurs mais aussi evoluer avec le centre educatif Code 212 afin d'ameliorer continuellement le support offert aux etudiants.
+Durant la phase de developpement, l'equipe met en œuvre la conception de l'application en integrant les differentes composantes technologiques. Les developpeurs intègrent le modèle de classification CardiffNLP, implementent les mecanismes de scraping avec Selenium, developpent l'API avec FastAPI et creent l'interface utilisateur avec Next.js. L'integration de Keycloak pour l'authentification et de Spring Gateway pour l'orchestration des microservices est rigoureusement testee pour garantir son bon fonctionnement. Une serie exhaustive de tests—tests unitaires pour chaque composant, tests d'integration entre les microservices et tests de charge pour valider les performances du scraping et de l'analyse—est realisee pour s'assurer que le système est robuste, evolutif et prêt pour le deploiement.
+Chacune de ces etapes est critique pour le succès de l'application d'analyse de sentiments qui est censee non seulement extraire et analyser efficacement les commentaires Hespress mais aussi evoluer avec les besoins du centre de formation Code 212 afin d'ameliorer continuellement les capacites d'analyse offertes.
