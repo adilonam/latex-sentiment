@@ -1,0 +1,199 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="LkOrLWu9mpOCzFyMnwEd">
+        <mxGraphModel dx="1670" dy="1548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="system-boundary" value="Système d&#39;Analyse de Sentiments Hespress" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#6c757d;strokeWidth=2;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="-510" width="750" height="1200" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-actor" value="Utilisateur" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="200" width="40" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="admin-actor" value="Administrateur" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="500" width="40" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="login-uc" value="S&#39;authentifier" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="-170" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="view-dashboard-uc" value="Consulter le tableau de bord" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="120" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="analyze-sentiment-uc" value="Analyser les sentiments" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="120" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="filter-comments-uc" value="Filtrer les commentaires" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="120" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="view-statistics-uc" value="Visualiser les statistiques" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="220" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="export-reports-uc" value="Exporter des rapports" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="220" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="search-comments-uc" value="Rechercher des commentaires" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="220" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="view-trends-uc" value="Analyser les tendances" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="220" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="manage-users-uc" value="Gérer les utilisateurs" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="360" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="configure-scraping-uc" value="Configurer le scraping" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="360" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="monitor-system-uc" value="Surveiller le système" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="360" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="manage-ml-model-uc" value="Gérer le modèle IA" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="360" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="configure-auth-uc" value="Configurer l&#39;authentification" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="460" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="manage-database-uc" value="Gérer la base de données" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="460" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="deploy-system-uc" value="Déployer le système" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="460" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="backup-restore-uc" value="Sauvegarder/Restaurer" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="460" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="analyze-performance-uc" value="Analyser les performances" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="580" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="manage-api-gateway-uc" value="Gérer l&#39;API Gateway" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="580" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-login" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="login-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="user-dashboard" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="view-dashboard-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="user-analyze" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="analyze-sentiment-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="user-filter" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="filter-comments-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="user-stats" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="view-statistics-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="user-export" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="export-reports-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="user-search" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="search-comments-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="user-trends" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="view-trends-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-login" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="login-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-users" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="manage-users-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-scraping" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="configure-scraping-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-monitor" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="monitor-system-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-ml" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="manage-ml-model-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-auth" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="configure-auth-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-db" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="manage-database-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-deploy" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="deploy-system-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-backup" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="backup-restore-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-performance" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="analyze-performance-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-gateway" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="manage-api-gateway-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-dashboard" value="" style="endArrow=none;html=1;rounded=0;strokeStyle=dashed;" parent="1" source="admin-actor" target="view-dashboard-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="admin-export-reports" value="" style="endArrow=none;html=1;rounded=0;strokeStyle=dashed;" parent="1" source="admin-actor" target="export-reports-uc" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
