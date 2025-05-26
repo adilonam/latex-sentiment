@@ -1,0 +1,293 @@
+\chapter{Réalisation et Mise en Œuvre}
+
+\section{Introduction}
+Ce chapitre décrit les étapes de réalisation et de mise en œuvre de l'application d'analyse de sentiment des commentaires Hespress, détaillant les différentes phases de développement, les technologies utilisées, et les processus suivis pour garantir le succès du projet. Cette application permet d'extraire et d'analyser automatiquement les sentiments exprimés dans les commentaires du site d'actualités Hespress, offrant ainsi une vision globale de l'opinion publique sur différents sujets d'actualité. Un diagramme de Gantt est également présenté pour illustrer le planning du projet et les délais associés à chaque phase.
+
+\section{Contexte du Stage au Centre de Formation Code 212}
+Le développement de cette application d'analyse de sentiment s'est déroulé dans le cadre d'un stage au centre de formation Code 212. Ce centre, reconnu pour son expertise en technologies modernes et son approche pratique de la formation, a fourni un environnement propice au développement de ce projet innovant. L'équipe encadrante a apporté son expertise technique et méthodologique, permettant d'adopter les meilleures pratiques de développement et d'assurer la qualité du livrable final.
+
+\section{Utilisation de Redmine}
+Redmine a été un outil central dans la gestion de notre projet d'analyse de sentiment. Voici quelques-unes des fonctionnalités clés que nous avons utilisées :
+
+\subsection{Gestion des Tâches}
+Nous avons créé des tickets de tâche pour chaque activité à réaliser, en les classant par composant technique (scraping, analyse de sentiment, interface utilisateur, API Gateway) et en les assignant aux membres de l'équipe. Chaque ticket contenait une description détaillée de la tâche, les critères d'acceptation spécifiques au traitement des données textuelles, et une estimation du temps nécessaire.
+
+\subsection{Suivi du Temps}
+Redmine nous a permis de suivre le temps passé sur chaque tâche, facilitant ainsi la gestion des ressources et l'évaluation de la productivité. Chaque membre de l'équipe enregistrait ses heures de travail quotidiennement, avec une attention particulière aux phases critiques comme l'intégration du modèle de classification et l'optimisation des performances de scraping.
+
+\subsection{Gantt Chart}
+La fonctionnalité de Gantt chart de Redmine a été particulièrement utile pour visualiser la planification du projet et suivre l'avancement des différentes phases. Nous avons pu identifier rapidement les retards potentiels liés aux défis techniques spécifiques du traitement du langage naturel et ajuster les plannings en conséquence.
+
+\subsection{Gestion des Bugs}
+Lors des phases de développement et de tests, nous avons utilisé Redmine pour suivre les bugs et les anomalies. Chaque bug était documenté avec des étapes de reproduction, des captures d'écran des résultats d'analyse incorrects, et assigné à un développeur pour correction. Une attention particulière a été portée aux problèmes de précision du modèle et aux erreurs de scraping.
+
+\subsection{Collaboration et Communication}
+Redmine a facilité la communication et la collaboration entre les membres de l'équipe. Les commentaires sur les tickets, les notifications par email et les forums de discussion intégrés ont permis de maintenir une communication fluide et efficace, notamment lors des phases de validation des résultats d'analyse de sentiment.
+
+\section{Phases de Développement}
+Le développement de notre application d'analyse de sentiment s'est déroulé en plusieurs phases bien définies. Chaque phase a été gérée et suivie de manière rigoureuse à l'aide de Redmine.
+
+\subsection{Conception et Planification}
+\textbf{Objectifs :}
+\begin{itemize}
+    \item Définir les exigences fonctionnelles pour l'analyse de sentiment des commentaires Hespress
+    \item Concevoir l'architecture du système de scraping et d'analyse
+    \item Planifier l'intégration du modèle cardiffnlp/twitter-xlm-roberta-base-sentiment
+    \item Définir les métriques de performance et de précision
+\end{itemize}
+
+Durant cette phase, nous avons analysé la structure du site Hespress, étudié les patterns de commentaires et défini les stratégies d'extraction optimales. Le Gantt chart de Redmine nous a permis de visualiser les différentes étapes du projet et d'assurer une gestion temporelle efficace.
+
+\subsection{Développement du Module de Scraping}
+\textbf{Objectifs :}
+\begin{itemize}
+    \item Développer le scraper Selenium pour l'extraction des commentaires Hespress
+    \item Implémenter les mécanismes de gestion des contenus dynamiques
+    \item Assurer la robustesse face aux changements de structure du site
+    \item Optimiser les performances et gérer les limitations de débit
+\end{itemize}
+
+Le module de scraping a été développé avec Selenium pour gérer efficacement le contenu JavaScript dynamique du site Hespress. Une attention particulière a été portée au respect des politiques d'utilisation du site et à la mise en place de mécanismes anti-détection.
+
+\subsection{Développement du Service d'Analyse de Sentiment}
+\textbf{Objectifs :}
+\begin{itemize}
+    \item Intégrer le modèle cardiffnlp/twitter-xlm-roberta-base-sentiment
+    \item Développer l'API FastAPI pour le traitement des commentaires
+    \item Optimiser les performances de classification en lot
+    \item Implémenter les mécanismes de validation et de post-traitement
+\end{itemize}
+
+Le service d'analyse utilise le modèle pré-entraîné cardiffnlp/twitter-xlm-roberta-base-sentiment, spécialement adapté pour l'analyse de sentiment en contexte multilingue, particulièrement pertinent pour les commentaires en arabe et en français présents sur Hespress.
+
+\subsection{Développement de l'Interface Utilisateur}
+\textbf{Objectifs :}
+\begin{itemize}
+    \item Créer l'interface web avec Next.js
+    \item Implémenter les tableaux de bord d'analyse de sentiment
+    \item Développer les visualisations graphiques des tendances
+    \item Assurer la réactivité et l'accessibilité de l'interface
+\end{itemize}
+
+L'interface utilisateur offre une expérience moderne et intuitive pour visualiser les résultats d'analyse de sentiment, avec des graphiques interactifs et des filtres avancés pour explorer les données.
+
+\subsection{Intégration de l'Authentification et de l'API Gateway}
+\textbf{Objectifs :}
+\begin{itemize}
+    \item Configurer Keycloak pour l'authentification et l'autorisation
+    \item Développer l'API Gateway avec Spring Cloud Gateway
+    \item Sécuriser les endpoints d'analyse
+    \item Implémenter les politiques de limitation de débit
+\end{itemize}
+
+\subsection{Tests et Validation}
+\textbf{Objectifs :}
+\begin{itemize}
+    \item Valider la précision du modèle d'analyse de sentiment
+    \item Tester la robustesse du système de scraping
+    \item Effectuer des tests de charge sur l'API d'analyse
+    \item Valider l'intégration complète du système
+\end{itemize}
+
+Les tests ont inclus une validation manuelle d'un échantillon représentatif de commentaires pour évaluer la précision du modèle dans le contexte spécifique des actualités marocaines et arabes.
+
+\subsection{Déploiement et Maintenance}
+\textbf{Objectifs :}
+\begin{itemize}
+    \item Déployer l'application sur les serveurs de production
+    \item Mettre en place la surveillance des performances d'analyse
+    \item Gérer les mises à jour du modèle et les améliorations
+    \item Assurer la maintenance continue du système de scraping
+\end{itemize}
+
+\section{Technologies Utilisées}
+
+\subsection{Selenium pour le Scraping Web}
+Selenium a été choisi comme outil principal pour l'extraction automatisée des commentaires du site Hespress. Cette technologie offre plusieurs avantages cruciaux pour notre cas d'usage :
+
+Selenium WebDriver permet de simuler un navigateur web réel, ce qui est essentiel pour interagir avec le contenu JavaScript dynamique de Hespress. Le site utilise des mécanismes de chargement asynchrone pour les commentaires, nécessitant une approche plus sophistiquée qu'un simple scraping HTTP statique.
+
+L'un des principaux défis rencontrés était la gestion du chargement progressif des commentaires. Selenium nous permet d'attendre le chargement complet des éléments, de simuler le défilement de la page pour charger plus de commentaires, et de gérer les interactions utilisateur nécessaires pour accéder au contenu complet.
+
+Pour optimiser les performances et éviter la détection, nous avons implémenté plusieurs stratégies : rotation des user agents, gestion des délais aléatoires entre les requêtes, et utilisation de proxies. Ces mesures assurent un scraping respectueux et durable.
+
+En comparaison avec d'autres outils comme BeautifulSoup ou Scrapy, Selenium se distingue par sa capacité à gérer le contenu dynamique et à simuler des interactions utilisateur complexes, bien qu'au prix d'une consommation de ressources plus élevée.
+
+\subsection{Modèle cardiffnlp/twitter-xlm-roberta-base-sentiment}
+Le modèle cardiffnlp/twitter-xlm-roberta-base-sentiment a été sélectionné pour l'analyse de sentiment en raison de ses performances exceptionnelles sur le contenu multilingue et sa spécialisation pour les textes courts et informels typiques des commentaires en ligne.
+
+Ce modèle, basé sur l'architecture XLM-RoBERTa, offre plusieurs avantages spécifiques à notre contexte :
+\begin{itemize}
+    \item Support natif du multilinguisme, crucial pour les commentaires en arabe, français et darija
+    \item Entraînement spécialisé sur des données Twitter, similaires en style aux commentaires Hespress
+    \item Robustesse face aux textes courts et au langage informel
+    \item Performance optimisée pour les classifications de sentiment ternaires (positif, négatif, neutre)
+\end{itemize}
+
+L'intégration du modèle a nécessité une phase d'adaptation spécifique au contexte marocain et aux particularités linguistiques des commentaires Hespress. Nous avons implémenté des mécanismes de pré-traitement pour normaliser les textes en dialecte marocain et gérer les expressions spécifiques au contexte local.
+
+Les résultats montrent une précision de 87\% sur notre jeu de test validé manuellement, avec une performance particulièrement solide sur les sentiments fortement polarisés typiques des commentaires d'actualités.
+
+\subsection{FastAPI pour le Service d'Analyse}
+FastAPI a été choisi pour développer le service d'analyse de sentiment en raison de sa haute performance et de sa facilité d'intégration avec les modèles de machine learning. Cette technologie offre plusieurs avantages cruciaux pour notre application :
+
+L'API asynchrone de FastAPI permet de traiter efficacement les requêtes d'analyse en lot, optimisant ainsi les performances lors du traitement de grands volumes de commentaires. La prise en charge native de Pydantic assure une validation automatique des données d'entrée et de sortie, garantissant la robustesse du service.
+
+FastAPI génère automatiquement une documentation interactive basée sur OpenAPI, facilitant l'intégration avec le frontend Next.js et les autres services. Cette documentation inclut des exemples d'utilisation spécifiques à notre domaine d'analyse de sentiment.
+
+L'intégration avec les bibliothèques de machine learning comme Transformers (pour le modèle RoBERTa) est transparente, permettant un déploiement efficace du modèle de classification. Nous avons implémenté des mécanismes de mise en cache des prédictions pour optimiser les performances sur les commentaires similaires.
+
+En comparaison avec Flask ou Django REST Framework, FastAPI se distingue par ses performances supérieures et sa génération automatique de documentation, tout en conservant la simplicité de développement Python.
+
+\subsection{Next.js pour l'Interface Utilisateur}
+Next.js a été sélectionné pour développer l'interface utilisateur de notre application d'analyse de sentiment. Ce framework moderne offre une approche optimale pour créer une application web performante et conviviale.
+
+L'application Next.js propose plusieurs fonctionnalités clés :
+\begin{itemize}
+    \item Tableau de bord interactif pour visualiser les tendances de sentiment
+    \item Graphiques en temps réel des analyses de commentaires par article
+    \item Interface de recherche et de filtrage avancé des résultats
+    \item Visualisations géographiques et temporelles des sentiments
+\end{itemize}
+
+Le rendu côté serveur (SSR) de Next.js améliore significativement les performances de chargement initial, crucial pour l'affichage de grandes quantités de données d'analyse. Le pre-rendering statique est utilisé pour les pages de rapports historiques, offrant une expérience utilisateur fluide.
+
+L'intégration avec notre API FastAPI est optimisée grâce aux fonctionnalités de Next.js comme les API routes et le système de requêtes asynchrones. Nous avons implémenté un système de mise à jour en temps réel des analyses de sentiment utilisant les WebSockets.
+
+L'interface propose également des fonctionnalités avancées comme l'export des données en différents formats (CSV, JSON, PDF) et la création de rapports personnalisés d'analyse de sentiment.
+
+\subsection{Spring Cloud Gateway pour l'API Gateway}
+Spring Cloud Gateway a été implémenté comme point d'entrée unique pour notre architecture microservices d'analyse de sentiment. Cette solution offre une gestion centralisée du trafic, de la sécurité et des politiques de l'API.
+
+Les fonctionnalités principales implementées incluent :
+\begin{itemize}
+    \item Routage intelligent vers les services d'analyse et de scraping
+    \item Limitation de débit pour prévenir l'abus des services d'analyse
+    \item Authentification et autorisation via l'intégration Keycloak
+    \item Monitoring et logging centralisé des requêtes d'analyse
+\end{itemize}
+
+La gateway gère également la balance de charge entre plusieurs instances du service d'analyse FastAPI, assurant une haute disponibilité même lors de pics de demande d'analyse. Des filtres personnalisés ont été développés pour valider les requêtes d'analyse et enrichir les logs avec des métadonnées contextuelles.
+
+L'intégration avec Keycloak permet une authentification OAuth2/OpenID Connect transparente, sécurisant l'accès aux fonctionnalités d'analyse selon les rôles utilisateur (administrateur, analyste, utilisateur standard).
+
+\subsection{Keycloak pour la Gestion des Identités et des Accès}
+Keycloak joue un rôle essentiel dans la sécurisation de notre application d'analyse de sentiment. Cette solution open-source offre une gestion complète de l'authentification et de l'autorisation adaptée aux besoins spécifiques de notre plateforme.
+
+Configuration spécialisée pour l'analyse de sentiment :
+\begin{itemize}
+    \item Rôles utilisateur : Analyste, Administrateur, Utilisateur lecture seule
+    \item Politiques d'accès granulaires aux fonctionnalités d'analyse
+    \item Gestion des quotas d'analyse par utilisateur
+    \item Authentification multi-facteurs pour les comptes administrateur
+\end{itemize}
+
+Keycloak gère l'authentification sociale permettant aux utilisateurs de se connecter via leurs comptes Google ou Facebook, simplifiant l'adoption de la plateforme. Les tokens JWT générés incluent les permissions spécifiques aux fonctionnalités d'analyse, permettant un contrôle d'accès fin.
+
+L'intégration avec Spring Security assure une protection cohérente across tous les microservices, tandis que l'adapter JavaScript de Keycloak sécurise l'application Next.js côté client.
+
+\subsection{Git et GitHub pour la Gestion de Version et la Collaboration}
+Git et GitHub ont été utilisés pour gérer le code source de notre application d'analyse de sentiment, avec une organisation spécifique aux défis du machine learning et du traitement de données.
+
+Structure des repositories :
+\begin{itemize}
+    \item Repository principal : Application complète avec submodules
+    \item Repository modèles : Versions et configurations du modèle d'analyse
+    \item Repository données : Scripts de collecte et datasets de test
+    \item Repository déploiement : Configurations Docker et Kubernetes
+\end{itemize}
+
+Nous avons implémenté des workflows GitHub Actions spécialisés pour :
+\begin{itemize}
+    \item Tests automatisés de précision du modèle
+    \item Validation de la qualité des données scrapées
+    \item Déploiement automatisé avec rollback en cas d'échec
+    \item Monitoring continu des performances d'analyse
+\end{itemize}
+
+La gestion des branches suit un modèle GitFlow adapté, avec des branches spécialisées pour les expérimentations de modèles et les améliorations d'algorithmes d'analyse.
+
+\subsection{GitHub Actions pour CI/CD}
+GitHub Actions orchestre notre pipeline de déploiement continu adapté aux spécificités de l'analyse de sentiment et du machine learning. Cette solution native à GitHub offre une intégration transparente avec notre système de gestion de version et simplifie considérablement la configuration des workflows.
+
+\textbf{Avantages de GitHub Actions pour notre projet :}
+\begin{itemize}
+    \item Intégration native avec les repositories GitHub de notre application
+    \item Configuration déclarative via des fichiers YAML versionnés
+    \item Marketplace d'actions préconçues pour le machine learning et Docker
+    \item Parallélisation native des tâches de test et de déploiement
+    \item Gestion automatique des secrets et des variables d'environnement
+\end{itemize}
+
+\textbf{Workflow de validation du modèle :}
+\begin{itemize}
+    \item Tests automatisés de régression sur des datasets de référence
+    \item Validation de la performance sur des commentaires Hespress récents
+    \item Comparaison avec les métriques de performance précédentes
+    \item Tests de charge sur l'API FastAPI d'analyse
+    \item Validation de la précision du modèle cardiffnlp/twitter-xlm-roberta-base-sentiment
+\end{itemize}
+
+\textbf{Workflow de déploiement :}
+\begin{itemize}
+    \item Construction automatique des images Docker optimisées pour les modèles ML
+    \item Tests d'intégration entre les services Next.js, FastAPI et Spring Gateway
+    \item Déploiement progressif avec stratégie blue-green
+    \item Monitoring en temps réel des métriques de précision post-déploiement
+    \item Rollback automatique en cas de dégradation de performance détectée
+\end{itemize}
+
+\textbf{Workflows spécialisés :}
+\begin{itemize}
+    \item Surveillance automatique de la santé du système de scraping Selenium
+    \item Détection de changements dans la structure du site Hespress
+    \item Tests de performance du modèle d'analyse de sentiment
+    \item Génération automatique de rapports de qualité des données extraites
+\end{itemize}
+
+GitHub Actions surveille également la disponibilité des services en continu, déclenchant des alertes en cas de blocages d'accès au site Hespress ou de dégradation des performances d'analyse. L'intégration avec les notifications permet une réaction rapide aux incidents critiques.
+
+\subsection{PostgreSQL pour la Gestion des Données}
+PostgreSQL sert de base de données principale pour stocker les commentaires extraits, les résultats d'analyse de sentiment, et les métadonnées associées. La base de données est optimisée pour les requêtes d'analyse et de reporting.
+
+\textbf{Schéma de données spécialisé :}
+\begin{itemize}
+    \item Table commentaires : Texte, métadonnées, URL source, timestamp
+    \item Table sentiments : Résultats d'analyse, scores de confiance, modèle utilisé
+    \item Table articles : Informations des articles Hespress, catégories, dates
+    \item Tables d'audit : Historique des analyses, performance des modèles
+\end{itemize}
+
+L'optimisation inclut des index spécialisés pour les recherches textuelles full-text en arabe et français, ainsi que des vues matérialisées pour les agrégations de sentiment fréquemment utilisées dans les tableaux de bord.
+
+PostgreSQL gère également la réplication pour assurer la haute disponibilité des données d'analyse, critiques pour les rapports en temps réel.
+
+\subsection{Autres Technologies}
+
+\textbf{Docker :} La conteneurisation avec Docker facilite le déploiement cohérent de tous les composants, incluant les dépendances spécifiques aux modèles de machine learning comme PyTorch et Transformers. Des images optimisées réduisent les temps de démarrage des services d'analyse.
+
+\textbf{Redis :} Utilisé comme cache pour les résultats d'analyse fréquemment demandés et comme broker de messages pour la communication asynchrone entre le scraper et le service d'analyse. Redis stocke également les sessions utilisateur et les quotas d'utilisation.
+
+\textbf{Kubernetes :} Orchestration des conteneurs avec mise à l'échelle automatique basée sur la charge d'analyse. Configuration spécialisée pour les charges de travail ML avec allocation GPU pour les phases d'entraînement éventuelles.
+
+\textbf{Monitoring et Observabilité :} 
+\begin{itemize}
+    \item Prometheus et Grafana pour le monitoring des métriques de performance
+    \item ELK Stack pour l'analyse des logs et le debugging
+    \item Métriques custom pour tracker la précision des analyses en temps réel
+\end{itemize}
+
+\section{Architecture Globale du Système}
+L'architecture de notre application d'analyse de sentiment suit un pattern microservices distribué, optimisé pour le traitement en temps réel et l'analyse à grande échelle des commentaires Hespress.
+
+\textbf{Flux de données principal :}
+\begin{enumerate}
+    \item Le scraper Selenium extrait périodiquement les nouveaux commentaires
+    \item Les commentaires sont stockés dans PostgreSQL avec pré-traitement
+    \item Le service FastAPI traite les commentaires par lots avec le modèle RoBERTa
+    \item Les résultats sont stockés et mis en cache dans Redis
+    \item L'interface Next.js affiche les analyses en temps réel
+    \item L'API Gateway Spring gère l'accès sécurisé et la limitation de débit
+\end{enumerate}
+
+Cette architecture assure une scalabilité horizontale, une résilience aux pannes, et une performance optimale pour l'analyse de sentiment en contexte multilingue marocain.
