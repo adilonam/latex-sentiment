@@ -5,31 +5,31 @@
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="User" value="&lt;&lt;Entity&gt;&gt;&#xa;User" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-                    <mxGeometry x="50" y="50" width="200" height="180" as="geometry"/>
+                    <mxGeometry x="1095" y="190" width="200" height="220" as="geometry"/>
                 </mxCell>
                 <mxCell id="User-attr" value="-id: String&#xa;-email: String&#xa;-firstName: String&#xa;-lastName: String&#xa;-role: UserRole&#xa;-isActive: Boolean&#xa;-createdAt: DateTime&#xa;-lastLogin: DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="User" vertex="1">
-                    <mxGeometry y="40" width="200" height="100" as="geometry"/>
+                    <mxGeometry y="40" width="200" height="128" as="geometry"/>
                 </mxCell>
                 <mxCell id="User-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="User" vertex="1">
-                    <mxGeometry y="140" width="200" height="8" as="geometry"/>
+                    <mxGeometry y="168" width="200" height="10" as="geometry"/>
                 </mxCell>
                 <mxCell id="User-methods" value="+authenticate(): Boolean&#xa;+updateProfile(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="User" vertex="1">
-                    <mxGeometry y="148" width="200" height="32" as="geometry"/>
+                    <mxGeometry y="178" width="200" height="42" as="geometry"/>
                 </mxCell>
                 <mxCell id="Comment" value="&lt;&lt;Entity&gt;&gt;&#xa;Comment" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-                    <mxGeometry x="320" y="50" width="220" height="200" as="geometry"/>
+                    <mxGeometry x="190" y="10" width="220" height="252" as="geometry"/>
                 </mxCell>
                 <mxCell id="Comment-attr" value="-id: String&#xa;-content: String&#xa;-url: String&#xa;-author: String&#xa;-publishDate: DateTime&#xa;-scrapedAt: DateTime&#xa;-sentiment: SentimentType&#xa;-confidence: Float&#xa;-isProcessed: Boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Comment" vertex="1">
-                    <mxGeometry y="40" width="220" height="120" as="geometry"/>
+                    <mxGeometry y="40" width="220" height="130" as="geometry"/>
                 </mxCell>
                 <mxCell id="Comment-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="Comment" vertex="1">
-                    <mxGeometry y="160" width="220" height="8" as="geometry"/>
+                    <mxGeometry y="170" width="220" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="Comment-methods" value="+analyzeSentiment(): void&#xa;+updateSentiment(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="Comment" vertex="1">
-                    <mxGeometry y="168" width="220" height="32" as="geometry"/>
+                    <mxGeometry y="190" width="220" height="62" as="geometry"/>
                 </mxCell>
                 <mxCell id="SentimentAnalyzer" value="&lt;&lt;Service&gt;&gt;&#xa;SentimentAnalyzer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-                    <mxGeometry x="600" y="50" width="250" height="180" as="geometry"/>
+                    <mxGeometry x="940" y="600" width="250" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="SentimentAnalyzer-attr" value="-modelName: String&#xa;-tokenizer: Tokenizer&#xa;-model: MLModel&#xa;-isLoaded: Boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SentimentAnalyzer" vertex="1">
                     <mxGeometry y="40" width="250" height="80" as="geometry"/>
@@ -41,19 +41,19 @@
                     <mxGeometry y="128" width="250" height="52" as="geometry"/>
                 </mxCell>
                 <mxCell id="HespressScraper" value="&lt;&lt;Service&gt;&gt;&#xa;HespressScraper" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-                    <mxGeometry x="50" y="300" width="220" height="200" as="geometry"/>
+                    <mxGeometry x="30" y="290" width="220" height="240" as="geometry"/>
                 </mxCell>
                 <mxCell id="HespressScraper-attr" value="-driver: WebDriver&#xa;-baseUrl: String&#xa;-maxPages: Integer&#xa;-delay: Integer&#xa;-isRunning: Boolean&#xa;-lastScrapeTime: DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="HespressScraper" vertex="1">
-                    <mxGeometry y="40" width="220" height="100" as="geometry"/>
+                    <mxGeometry y="40" width="220" height="125" as="geometry"/>
                 </mxCell>
                 <mxCell id="HespressScraper-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="HespressScraper" vertex="1">
-                    <mxGeometry y="140" width="220" height="8" as="geometry"/>
+                    <mxGeometry y="165" width="220" height="11" as="geometry"/>
                 </mxCell>
                 <mxCell id="HespressScraper-methods" value="+scrapeComments(): List&lt;Comment&gt;&#xa;+startScraping(): void&#xa;+stopScraping(): void&#xa;+configureDriver(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="HespressScraper" vertex="1">
-                    <mxGeometry y="148" width="220" height="52" as="geometry"/>
+                    <mxGeometry y="176" width="220" height="64" as="geometry"/>
                 </mxCell>
                 <mxCell id="ApiGateway" value="&lt;&lt;Gateway&gt;&gt;&#xa;SpringApiGateway" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-                    <mxGeometry x="320" y="300" width="220" height="160" as="geometry"/>
+                    <mxGeometry x="550" y="220" width="220" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="ApiGateway-attr" value="-routes: List&lt;Route&gt;&#xa;-filters: List&lt;Filter&gt;&#xa;-authService: AuthService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="ApiGateway" vertex="1">
                     <mxGeometry y="40" width="220" height="60" as="geometry"/>
@@ -65,16 +65,16 @@
                     <mxGeometry y="108" width="220" height="52" as="geometry"/>
                 </mxCell>
                 <mxCell id="AuthService" value="&lt;&lt;Service&gt;&gt;&#xa;KeycloakAuthService" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-                    <mxGeometry x="600" y="300" width="220" height="180" as="geometry"/>
+                    <mxGeometry x="820" y="190" width="220" height="220" as="geometry"/>
                 </mxCell>
                 <mxCell id="AuthService-attr" value="-keycloakUrl: String&#xa;-realm: String&#xa;-clientId: String&#xa;-clientSecret: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="AuthService" vertex="1">
-                    <mxGeometry y="40" width="220" height="80" as="geometry"/>
+                    <mxGeometry y="40" width="220" height="103" as="geometry"/>
                 </mxCell>
                 <mxCell id="AuthService-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="AuthService" vertex="1">
-                    <mxGeometry y="120" width="220" height="8" as="geometry"/>
+                    <mxGeometry y="143" width="220" height="10" as="geometry"/>
                 </mxCell>
                 <mxCell id="AuthService-methods" value="+login(email, password): Token&#xa;+validateToken(token): Boolean&#xa;+refreshToken(token): Token&#xa;+logout(token): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="AuthService" vertex="1">
-                    <mxGeometry y="128" width="220" height="52" as="geometry"/>
+                    <mxGeometry y="153" width="220" height="67" as="geometry"/>
                 </mxCell>
                 <mxCell id="CommentRepository" value="&lt;&lt;Repository&gt;&gt;&#xa;CommentRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
                     <mxGeometry x="50" y="560" width="220" height="160" as="geometry"/>
@@ -89,19 +89,19 @@
                     <mxGeometry y="88" width="220" height="72" as="geometry"/>
                 </mxCell>
                 <mxCell id="DashboardService" value="&lt;&lt;Service&gt;&gt;&#xa;DashboardService" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#e6f3ff;strokeColor=#4d9ddb;" parent="1" vertex="1">
-                    <mxGeometry x="340" y="560" width="220" height="160" as="geometry"/>
+                    <mxGeometry x="30" y="800" width="270" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="DashboardService-attr" value="-commentRepository: CommentRepository&#xa;-statisticsCache: Cache" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="DashboardService" vertex="1">
-                    <mxGeometry y="40" width="220" height="40" as="geometry"/>
+                    <mxGeometry y="40" width="270" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="DashboardService-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="DashboardService" vertex="1">
-                    <mxGeometry y="80" width="220" height="8" as="geometry"/>
+                    <mxGeometry y="80" width="270" height="8" as="geometry"/>
                 </mxCell>
                 <mxCell id="DashboardService-methods" value="+getStatistics(): Statistics&#xa;+getSentimentTrends(): TrendData&#xa;+exportReport(format): File&#xa;+searchComments(query): List&lt;Comment&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="DashboardService" vertex="1">
-                    <mxGeometry y="88" width="220" height="72" as="geometry"/>
+                    <mxGeometry y="88" width="270" height="72" as="geometry"/>
                 </mxCell>
                 <mxCell id="CommentController" value="&lt;&lt;Controller&gt;&gt;&#xa;CommentController" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#ffcccc;strokeColor=#cc6666;" parent="1" vertex="1">
-                    <mxGeometry x="600" y="560" width="220" height="180" as="geometry"/>
+                    <mxGeometry x="955" y="830" width="220" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="CommentController-attr" value="-commentService: CommentService&#xa;-sentimentAnalyzer: SentimentAnalyzer&#xa;-authService: AuthService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="CommentController" vertex="1">
                     <mxGeometry y="40" width="220" height="60" as="geometry"/>
@@ -113,25 +113,25 @@
                     <mxGeometry y="108" width="220" height="72" as="geometry"/>
                 </mxCell>
                 <mxCell id="SentimentType" value="&lt;&lt;Enumeration&gt;&gt;&#xa;SentimentType" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#ffeaa7;strokeColor=#fdcb6e;" parent="1" vertex="1">
-                    <mxGeometry x="900" y="50" width="150" height="120" as="geometry"/>
+                    <mxGeometry x="460" y="70" width="150" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="SentimentType-values" value="POSITIVE&#xa;NEGATIVE&#xa;NEUTRAL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SentimentType" vertex="1">
                     <mxGeometry y="40" width="150" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="UserRole" value="&lt;&lt;Enumeration&gt;&gt;&#xa;UserRole" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#ffeaa7;strokeColor=#fdcb6e;" parent="1" vertex="1">
-                    <mxGeometry x="900" y="200" width="150" height="100" as="geometry"/>
+                    <mxGeometry x="1120" y="60" width="150" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="UserRole-values" value="ADMIN&#xa;USER" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="UserRole" vertex="1">
                     <mxGeometry y="40" width="150" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="SentimentResult" value="&lt;&lt;ValueObject&gt;&gt;&#xa;SentimentResult" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#e8f5e8;strokeColor=#5a9e5a;" parent="1" vertex="1">
-                    <mxGeometry x="900" y="340" width="150" height="120" as="geometry"/>
+                    <mxGeometry x="990" y="430" width="150" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="SentimentResult-attr" value="-sentiment: SentimentType&#xa;-confidence: Float&#xa;-scores: Map&lt;String, Float&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SentimentResult" vertex="1">
                     <mxGeometry y="40" width="150" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="NextJSFrontend" value="&lt;&lt;Frontend&gt;&gt;&#xa;Next.js Application" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#e1f5fe;strokeColor=#0277bd;" parent="1" vertex="1">
-                    <mxGeometry x="900" y="500" width="200" height="200" as="geometry"/>
+                    <mxGeometry x="560" y="440" width="200" height="200" as="geometry"/>
                 </mxCell>
                 <mxCell id="NextJSFrontend-components" value="Components:&#xa;- Dashboard&#xa;- CommentsList&#xa;- SentimentChart&#xa;- LoginForm&#xa;- StatisticsPanel&#xa;- SearchBar&#xa;- ExportButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="NextJSFrontend" vertex="1">
                     <mxGeometry y="40" width="200" height="120" as="geometry"/>
@@ -166,10 +166,13 @@
                         <mxPoint x="430" y="350" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="repo-comment-rel" style="endArrow=open;endFill=1;endSize=12;html=1;" parent="1" source="CommentRepository" target="Comment" edge="1">
+                <mxCell id="repo-comment-rel" style="endArrow=open;endFill=1;endSize=12;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;" parent="1" source="CommentRepository" target="Comment" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
-                        <mxPoint x="270" y="560" as="sourcePoint"/>
+                        <mxPoint x="170" y="530" as="sourcePoint"/>
                         <mxPoint x="430" y="560" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="300" y="530"/>
+                        </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="dashboard-repo-rel" style="endArrow=open;endFill=1;endSize=12;html=1;" parent="1" source="DashboardService" target="CommentRepository" edge="1">
