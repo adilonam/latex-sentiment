@@ -1,0 +1,311 @@
+<mxfile host="65bd71144e">
+    <diagram name="Gantt Réel - Sentiment Analysis System" id="gantt-reel-diagram">
+        <mxGraphModel dx="1422" dy="772" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                
+                <!-- Title -->
+                <mxCell id="Title" value="Diagramme de Gantt Réel - Projet Analyse de Sentiments Hespress" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="30" width="800" height="30" as="geometry"/>
+                </mxCell>
+                
+                <!-- Subtitle -->
+                <mxCell id="Subtitle" value="Période: 01/03/2025 - 30/05/2025 | Centre de Formation Code 212" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="60" width="800" height="20" as="geometry"/>
+                </mxCell>
+                
+                <!-- Headers -->
+                <mxCell id="TaskHeader" value="Tâches / Sprints" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="100" width="200" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Mars" value="Mars 2025" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="100" width="300" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Avril" value="Avril 2025" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="100" width="300" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Mai" value="Mai 2025" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="850" y="100" width="300" height="40" as="geometry"/>
+                </mxCell>
+                
+                <!-- Week Headers -->
+                <mxCell id="MarsS1" value="S1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="140" width="75" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="MarsS2" value="S2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="325" y="140" width="75" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="MarsS3" value="S3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="140" width="75" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="MarsS4" value="S4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="475" y="140" width="75" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="AvrilS1" value="S1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="140" width="75" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="AvrilS2" value="S2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="625" y="140" width="75" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="AvrilS3" value="S3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="140" width="75" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="AvrilS4" value="S4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="775" y="140" width="75" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="MaiS1" value="S1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="850" y="140" width="75" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="MaiS2" value="S2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="925" y="140" width="75" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="MaiS3" value="S3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="1000" y="140" width="75" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="MaiS4" value="S4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="1075" y="140" width="75" height="20" as="geometry"/>
+                </mxCell>
+                
+                <!-- Sprint 1 - Ajusté -->
+                <mxCell id="Sprint1Label" value="Sprint 1&#xa;Configuration environnement&#xa;Intégration modèle ML" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="180" width="200" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Sprint1BarReal" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4472C4;strokeColor=#2F5597;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="195" width="175" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Sprint1TextReal" value="01/03 - 16/03" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="195" width="175" height="30" as="geometry"/>
+                </mxCell>
+                
+                <!-- Sprint 2 - Ajusté -->
+                <mxCell id="Sprint2Label" value="Sprint 2&#xa;Web scraping Hespress&#xa;Preprocessing des données" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="260" width="200" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Sprint2BarReal" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#70AD47;strokeColor=#4F7530;" vertex="1" parent="1">
+                    <mxGeometry x="425" y="275" width="225" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Sprint2TextReal" value="17/03 - 06/04" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="425" y="275" width="225" height="30" as="geometry"/>
+                </mxCell>
+                
+                <!-- Sprint 3 - Ajusté -->
+                <mxCell id="Sprint3Label" value="Sprint 3&#xa;Tableau de bord Next.js&#xa;Interface d'authentification" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="340" width="200" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Sprint3BarReal" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFC000;strokeColor=#B8860B;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="355" width="225" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Sprint3TextReal" value="07/04 - 27/04" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="355" width="225" height="30" as="geometry"/>
+                </mxCell>
+                
+                <!-- Sprint 4 - Étendu jusqu'à S4 de Mai -->
+                <mxCell id="Sprint4Label" value="Sprint 4&#xa;Génération de rapports&#xa;Optimisation et déploiement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;verticalAlign=middle;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="420" width="200" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Sprint4BarReal" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C5504B;strokeColor=#8B3A3A;" vertex="1" parent="1">
+                    <mxGeometry x="875" y="435" width="275" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Sprint4TextReal" value="28/04 - 30/05" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="875" y="435" width="275" height="30" as="geometry"/>
+                </mxCell>
+                
+                <!-- Milestones Ajustés -->
+                <mxCell id="MilestoneHeader" value="Jalons Principaux" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="520" width="200" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Milestone1Real" value="🎯" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ff6666;strokeColor=#ff0000;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="520" width="30" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Milestone1TextReal" value="Env. configuré" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="555" width="90" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Milestone2Real" value="🎯" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ff6666;strokeColor=#ff0000;" vertex="1" parent="1">
+                    <mxGeometry x="525" y="520" width="30" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Milestone2TextReal" value="Scraping opérationnel" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="485" y="555" width="110" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Milestone3Real" value="🎯" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ff6666;strokeColor=#ff0000;" vertex="1" parent="1">
+                    <mxGeometry x="750" y="520" width="30" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Milestone3TextReal" value="Dashboard fonctionnel" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="705" y="555" width="120" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Milestone4Real" value="🎯" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ff6666;strokeColor=#ff0000;" vertex="1" parent="1">
+                    <mxGeometry x="1100" y="520" width="30" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Milestone4TextReal" value="Déploiement final" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="1060" y="555" width="110" height="20" as="geometry"/>
+                </mxCell>
+                
+                <!-- Progress Indicators -->
+                <mxCell id="ProgressHeader" value="État d'Avancement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="590" width="200" height="30" as="geometry"/>
+                </mxCell>
+                
+                <!-- Sprint 1 Progress (100% - Completed) -->
+                <mxCell id="Progress1Label" value="Sprint 1 (100%)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="590" width="80" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Progress1Bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#28a745;strokeColor=#1e7e34;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="595" width="175" height="20" as="geometry"/>
+                </mxCell>
+                
+                <!-- Sprint 2 Progress (100% - Completed) -->
+                <mxCell id="Progress2Label" value="Sprint 2 (100%)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="495" y="590" width="80" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Progress2Bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#28a745;strokeColor=#1e7e34;" vertex="1" parent="1">
+                    <mxGeometry x="425" y="595" width="225" height="20" as="geometry"/>
+                </mxCell>
+                
+                <!-- Sprint 3 Progress (95% - Near completion) -->
+                <mxCell id="Progress3Label" value="Sprint 3 (95%)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="590" width="80" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Progress3Bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#28a745;strokeColor=#1e7e34;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="595" width="214" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Progress3Remaining" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffc107;strokeColor=#e0a800;" vertex="1" parent="1">
+                    <mxGeometry x="864" y="595" width="11" height="20" as="geometry"/>
+                </mxCell>
+                
+                <!-- Sprint 4 Progress (80% - In progress) -->
+                <mxCell id="Progress4Label" value="Sprint 4 (80%)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="945" y="590" width="80" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Progress4Bar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#28a745;strokeColor=#1e7e34;" vertex="1" parent="1">
+                    <mxGeometry x="875" y="595" width="220" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Progress4Remaining" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dc3545;strokeColor=#c82333;" vertex="1" parent="1">
+                    <mxGeometry x="1095" y="595" width="55" height="20" as="geometry"/>
+                </mxCell>
+                
+                <!-- Technology Stack Legend -->
+                <mxCell id="TechHeader" value="Technologies Utilisées" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="640" width="200" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="TechNextJS" value="Next.js (Frontend)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="640" width="120" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="TechFastAPI" value="FastAPI (Backend)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="640" width="120" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="TechKeycloak" value="Keycloak (Auth)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="640" width="120" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="TechPostgres" value="PostgreSQL (DB)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="640" width="120" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="TechRedis" value="Redis (Cache)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="830" y="640" width="120" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="TechSelenium" value="Selenium (Scraper)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc6666;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="680" width="120" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="TechML" value="Cardiff NLP (ML)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#4d9ddb;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="680" width="120" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="TechSpring" value="Spring Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="680" width="120" height="30" as="geometry"/>
+                </mxCell>
+                
+                <!-- Legend -->
+                <mxCell id="LegendHeader" value="Légende" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="730" width="100" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="CompletedBar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#28a745;strokeColor=#1e7e34;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="735" width="60" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="CompletedText" value="Terminé" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="730" width="60" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="InProgressBar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffc107;strokeColor=#e0a800;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="735" width="60" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="InProgressText" value="En cours" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="730" width="60" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="RemainingBar" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dc3545;strokeColor=#c82333;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="735" width="60" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="RemainingText" value="Restant" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="730" width="60" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="MilestoneIconLegend" value="🎯" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ff6666;strokeColor=#ff0000;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="735" width="20" height="20" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="MilestoneTextLegend" value="Jalon important" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="730" width="100" height="30" as="geometry"/>
+                </mxCell>
+                
+                <!-- Current Date Indicator -->
+                <mxCell id="CurrentDateLabel" value="📅 Date actuelle: 28/05/2025" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ff9999;strokeColor=#ff0000;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="750" y="730" width="200" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="CurrentDateLine" value="" style="endArrow=none;html=1;strokeColor=#ff0000;strokeWidth=3;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1070" y="160" as="sourcePoint"/>
+                        <mxPoint x="1070" y="620" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

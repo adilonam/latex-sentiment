@@ -1,0 +1,344 @@
+<mxfile host="65bd71144e">
+    <diagram name="Sequence Diagram - Sentiment Analysis System" id="sequence-diagram">
+        <mxGraphModel dx="1422" dy="772" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                
+                <!-- Actors and Systems -->
+                <mxCell id="User" value="Utilisateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="40" width="30" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="NextJS" value="Next.js&#xa;Frontend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="40" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="ApiGateway" value="Spring&#xa;API Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="40" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Keycloak" value="Keycloak&#xa;Auth Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="40" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="FastAPI" value="FastAPI&#xa;Backend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="40" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Redis" value="Redis&#xa;Cache" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="840" y="40" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="PostgreSQL" value="PostgreSQL&#xa;Database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+                    <mxGeometry x="1000" y="40" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Selenium" value="Selenium&#xa;Scraper" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc6666;" vertex="1" parent="1">
+                    <mxGeometry x="1160" y="40" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="MLModel" value="Cardiff NLP&#xa;ML Model" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#4d9ddb;" vertex="1" parent="1">
+                    <mxGeometry x="1320" y="40" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <!-- Lifelines -->
+                <mxCell id="UserLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="95" y="100" as="sourcePoint"/>
+                        <mxPoint x="95" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="NextJSLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="100" as="sourcePoint"/>
+                        <mxPoint x="240" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="ApiGatewayLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="100" as="sourcePoint"/>
+                        <mxPoint x="400" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="KeycloakLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="560" y="100" as="sourcePoint"/>
+                        <mxPoint x="560" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="FastAPILifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="720" y="100" as="sourcePoint"/>
+                        <mxPoint x="720" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="RedisLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="880" y="100" as="sourcePoint"/>
+                        <mxPoint x="880" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="PostgreSQLLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1040" y="100" as="sourcePoint"/>
+                        <mxPoint x="1040" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="SeleniumLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1200" y="100" as="sourcePoint"/>
+                        <mxPoint x="1200" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="MLModelLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1360" y="100" as="sourcePoint"/>
+                        <mxPoint x="1360" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <!-- Sequence Flow 1: Authentication -->
+                <mxCell id="Note1" value="1. Processus d'Authentification" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Arrow1" value="1.1: Login Request" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="95" y="160" as="sourcePoint"/>
+                        <mxPoint x="240" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow2" value="1.2: Route to Auth" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="240" y="180" as="sourcePoint"/>
+                        <mxPoint x="400" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow3" value="1.3: Authenticate" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="400" y="200" as="sourcePoint"/>
+                        <mxPoint x="560" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow4" value="1.4: JWT Token" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="560" y="220" as="sourcePoint"/>
+                        <mxPoint x="400" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow5" value="1.5: Auth Success" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="400" y="240" as="sourcePoint"/>
+                        <mxPoint x="240" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow6" value="1.6: Dashboard Access" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="240" y="260" as="sourcePoint"/>
+                        <mxPoint x="95" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <!-- Sequence Flow 2: Scraping Process -->
+                <mxCell id="Note2" value="2. Processus de Scraping (Automatique)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="300" width="250" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Arrow7" value="2.1: Schedule Scraping" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="720" y="340" as="sourcePoint"/>
+                        <mxPoint x="1200" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow8" value="2.2: Scrape Hespress Comments" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="1200" y="360" as="sourcePoint"/>
+                        <mxPoint x="1200" y="380" as="targetPoint"/>
+                        <mxArray as="points">
+                            <mxPoint x="1250" y="370"/>
+                        </mxArray>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow9" value="2.3: Raw Comments Data" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="1200" y="400" as="sourcePoint"/>
+                        <mxPoint x="720" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <!-- Sequence Flow 3: Sentiment Analysis -->
+                <mxCell id="Note3" value="3. Analyse de Sentiment" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="440" width="200" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Arrow10" value="3.1: Analyze Sentiment" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="720" y="480" as="sourcePoint"/>
+                        <mxPoint x="1360" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow11" value="3.2: Cardiff NLP Model Processing" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="1360" y="500" as="sourcePoint"/>
+                        <mxPoint x="1360" y="520" as="targetPoint"/>
+                        <mxArray as="points">
+                            <mxPoint x="1410" y="510"/>
+                        </mxArray>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow12" value="3.3: Sentiment Results" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="1360" y="540" as="sourcePoint"/>
+                        <mxPoint x="720" y="540" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <!-- Sequence Flow 4: Data Storage -->
+                <mxCell id="Note4" value="4. Stockage des Données" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="580" width="200" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Arrow13" value="4.1: Store in Database" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="720" y="620" as="sourcePoint"/>
+                        <mxPoint x="1040" y="620" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow14" value="4.2: Cache Statistics" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="720" y="640" as="sourcePoint"/>
+                        <mxPoint x="880" y="640" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow15" value="4.3: Confirmation" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="1040" y="660" as="sourcePoint"/>
+                        <mxPoint x="720" y="660" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <!-- Sequence Flow 5: User Data Retrieval -->
+                <mxCell id="Note5" value="5. Consultation des Données par l'Utilisateur" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="700" width="280" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Arrow16" value="5.1: Request Dashboard Data" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="95" y="740" as="sourcePoint"/>
+                        <mxPoint x="240" y="740" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow17" value="5.2: API Request" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="240" y="760" as="sourcePoint"/>
+                        <mxPoint x="400" y="760" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow18" value="5.3: Validate Token" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="400" y="780" as="sourcePoint"/>
+                        <mxPoint x="560" y="780" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow19" value="5.4: Token Valid" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="560" y="800" as="sourcePoint"/>
+                        <mxPoint x="400" y="800" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow20" value="5.5: Forward Request" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="400" y="820" as="sourcePoint"/>
+                        <mxPoint x="720" y="820" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow21" value="5.6: Check Cache" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="720" y="840" as="sourcePoint"/>
+                        <mxPoint x="880" y="840" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow22" value="5.7: Cache Miss" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="880" y="860" as="sourcePoint"/>
+                        <mxPoint x="720" y="860" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow23" value="5.8: Query Database" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="720" y="880" as="sourcePoint"/>
+                        <mxPoint x="1040" y="880" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow24" value="5.9: Sentiment Data" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="1040" y="900" as="sourcePoint"/>
+                        <mxPoint x="720" y="900" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow25" value="5.10: Update Cache" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="720" y="920" as="sourcePoint"/>
+                        <mxPoint x="880" y="920" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow26" value="5.11: Response Data" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="720" y="940" as="sourcePoint"/>
+                        <mxPoint x="400" y="940" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow27" value="5.12: Dashboard Data" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="400" y="960" as="sourcePoint"/>
+                        <mxPoint x="240" y="960" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow28" value="5.13: Display Results" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;dashed=1;" edge="1" parent="1">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="240" y="980" as="sourcePoint"/>
+                        <mxPoint x="95" y="980" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <!-- Alternative Flow -->
+                <mxCell id="Note6" value="Note: Le scraping et l'analyse s'exécutent en arrière-plan&#xa;de manière continue via des tâches planifiées" style="text;html=1;strokeColor=none;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontStyle=2;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="1100" y="1020" width="300" height="50" as="geometry"/>
+                </mxCell>
+                
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
