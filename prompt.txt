@@ -1,6 +1,6 @@
-prompt:
-change ca car mnt il sagit d une app d avoir les sentiments ducommentaire en Hespress , on va utiliser next js pour front et fast api pour back et keycklok pout ath et postgres pour base et redis pour cache donne et selenium pour scrpaer et model cardiffnlp/twitter-xlm-roberta-base-sentiment pour text classification , et spring pour api gateway 
-le stage s est deroule au centre formation Code 212
+c est une application de détection de sentiments des commentaires sur Hespress. Nous utiliserons Next.js pour le front-end, FastAPI pour le back-end, Keycloak pour l'authentification, PostgreSQL pour la base de données, Redis pour le cache, Selenium pour le scraping, et le modèle cardiffnlp/twitter-xlm-roberta-base-sentiment pour la classification de texte. Spring servira d'API Gateway.
+
+Le stage s'est déroulé au centre de formation Code 212.
 
 
 

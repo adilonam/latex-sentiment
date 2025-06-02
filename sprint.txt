@@ -1,7 +1,13 @@
-6.4 Sprint Plan
-Sprint 1 : Configuration de l’environnement (User Story 1.1), Integration du modele
-d’analyse (User Story 1.2)
-Sprint 2 : Developpement du web scraping (User Story 2.1), Preprocessing des donnees
-(User Story 2.2)
-Sprint 3 : Developpement du tableau de bord (User Story 3.1), Interface d’authentification
-Sprint 4 : Generation de rapports (User Story 3.2), Optimisation et deploiement
+Plan de Release – Application Web d’Analyse de Sentiment des Commentaires sur Hespress
+
+Sprint 1 :
+Configuration de l’environnement de développement (Next.js, FastAPI, Spring) et mise en place de l’authentification via Keycloak.
+
+Sprint 2 :
+Développement du module de web scraping avec Selenium, prétraitement et nettoyage des données avec Pandas, et initialisation de l’API de récupération des données.
+
+Sprint 3 :
+Intégration du modèle d’analyse de sentiment (cardiffnlp/twitter-xlm-roberta-base-sentiment de Hugging Face) et démarrage du tableau de bord de visualisation.
+
+Sprint 4 :
+Génération automatique des rapports d’analyse et phase complète de tests fonctionnels.

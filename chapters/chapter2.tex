@@ -2,9 +2,9 @@
 
 \section{Introduction}
 
-Ce chapitre presente l'analyse fonctionnelle de l'application d'analyse de sentiments des commentaires d'Hespress destinee aux analystes, chercheurs et decideurs. L'objectif est de fournir une plateforme complete et performante pour la collecte automatisee, l'analyse et la visualisation des sentiments exprimes dans les commentaires du site d'actualites Hespress. Cette analyse detaillee etablira des directives pour le developpement d'une interface utilisateur intuitive et d'un systeme d'analyse robuste, mettant en avant les besoins d'analyse des donnees textuelles en temps reel.
+Ce chapitre presente l'analyse fonctionnelle de l'application de detection de sentiments des commentaires d'Hespress destinee aux analystes, chercheurs et decideurs. L'objectif est de fournir une plateforme complete et performante pour la collecte automatisee, l'analyse et la visualisation des sentiments exprimes dans les commentaires du site d'actualites Hespress. Cette analyse detaillee etablira des directives pour le developpement d'une interface utilisateur intuitive et d'un systeme d'analyse robuste, mettant en avant les besoins d'analyse des donnees textuelles en temps reel.
 
-L'application integre des technologies modernes comme Next.js pour le frontend, FastAPI pour le backend, Keycloak pour l'authentification, Selenium pour le web scraping, le modele cardiffnlp/twitter-xlm-roberta-base-sentiment pour la classification des sentiments, et Spring pour l'API Gateway. Un systeme convivial et performant servira de catalyseur pour une meilleure comprehension des opinions publiques et des tendances sociales.
+L'application integre des technologies modernes developpes dans le cadre du stage au centre de formation Code 212 : Next.js pour le frontend, FastAPI pour le backend, Keycloak pour l'authentification, PostgreSQL pour la base de donnees, Redis pour le cache, Selenium pour le scraping, le modele cardiffnlp/twitter-xlm-roberta-base-sentiment pour la classification de texte, et Spring servant d'API Gateway. Un systeme convivial et performant servira de catalyseur pour une meilleure comprehension des opinions publiques et des tendances sociales.
 
 \section{Identification des Besoins Utilisateurs}
 
@@ -19,16 +19,19 @@ L'application doit faciliter une collecte automatisee des donnees, une analyse p
 \textbf{Besoin identifie} & \textbf{Description du besoin} \\
 \hline
 Collecte automatisee des donnees & 
-L'application doit offrir une interface permettant de configurer et de lancer automatiquement la collecte des commentaires d'Hespress via web scraping. \\
+L'application doit offrir une interface permettant de configurer et de lancer automatiquement la collecte des commentaires d'Hespress via web scraping avec Selenium. \\
 \hline
 Analyse de sentiments en temps reel & 
-Un systeme d'analyse utilisant des modeles de NLP avances pour classifier automatiquement les sentiments (positif, negatif, neutre) des commentaires collectes. \\
+Un systeme d'analyse utilisant le modele cardiffnlp/twitter-xlm-roberta-base-sentiment pour classifier automatiquement les sentiments (positif, negatif, neutre) des commentaires collectes. \\
 \hline
 Visualisation et reporting & 
-Des tableaux de bord interactifs et des rapports detailles pour visualiser les tendances de sentiments, generer des statistiques et suivre l'evolution des opinions dans le temps. \\
+Des tableaux de bord interactifs developpes avec Next.js et des rapports detailles pour visualiser les tendances de sentiments, generer des statistiques et suivre l'evolution des opinions dans le temps. \\
 \hline
 Gestion des utilisateurs et securite & 
-Un systeme d'authentification robuste permettant la gestion des droits d'acces et la securisation des donnees sensibles. \\
+Un systeme d'authentification robuste avec Keycloak permettant la gestion des droits d'acces et la securisation des donnees sensibles stockees dans PostgreSQL. \\
+\hline
+Mise en cache et performance & 
+Integration de Redis pour optimiser les performances en mettant en cache les resultats d'analyse frequemment demandes et ameliorer les temps de reponse. \\
 \hline
 \end{tabularx}
 \caption{Besoins utilisateurs pour l'application d'analyse de sentiments}
@@ -42,7 +45,7 @@ En repondant a ces besoins, l'application d'analyse de sentiments represente un 
 La specification des fonctionnalites traduit les besoins utilisateurs en caracteristiques techniques et operationnelles concretes de l'application d'analyse de sentiments. Cette section detaille les fonctionnalites essentielles requises pour repondre aux exigences des analystes et des decideurs.
 
 \begin{itemize}
-    \item \textbf{Collecte de donnees} : Le module de collecte utilise \textbf{Selenium + FastAPI} pour assurer une collecte automatisee des commentaires d'Hespress. Cette fonctionnalite permet la configuration des parametres de scraping et la gestion des sessions, offrant ainsi une solution robuste pour l'acquisition continue de donnees textuelles.
+    \item \textbf{Collecte de donnees} : Le module de collecte utilise \textbf{Selenium} avec \textbf{FastAPI} pour assurer une collecte automatisee des commentaires d'Hespress. Cette fonctionnalite permet la configuration des parametres de scraping et la gestion des sessions, offrant ainsi une solution robuste pour l'acquisition continue de donnees textuelles.
     
     \item \textbf{Analyse de sentiments} : L'analyse est realisee grace au modele \textbf{cardiffnlp/twitter-xlm-roberta-base-sentiment}, qui assure une classification automatique des sentiments avec un support multilingue (arabe, français, darija) et un scoring de confiance pour chaque prediction.
     
@@ -50,9 +53,11 @@ La specification des fonctionnalites traduit les besoins utilisateurs en caracte
     
     \item \textbf{Gestion des utilisateurs} : \textbf{Keycloak} assure l'authentification securisee, la gestion des roles et le controle d'acces aux fonctionnalites selon les privileges des utilisateurs, garantissant ainsi la securite et la confidentialite des donnees.
     
-    \item \textbf{API Gateway} : \textbf{Spring Gateway} centralise la gestion des requetes, assure le load balancing et securise les communications entre les differents microservices de l'architecture.
+    \item \textbf{API Gateway} : \textbf{Spring} sert d'API Gateway et centralise la gestion des requetes, assure le load balancing et securise les communications entre les differents microservices de l'architecture.
     
-    \item \textbf{Stockage et historique} : La base de donnees permet la sauvegarde des donnees collectees et des resultats d'analyse, avec la possibilite d'effectuer des requetes historiques pour analyser l'evolution des sentiments dans le temps.
+    \item \textbf{Stockage et cache} : \textbf{PostgreSQL} sert de base de donnees principale pour la sauvegarde des donnees collectees et des resultats d'analyse, tandis que \textbf{Redis} optimise les performances en mettant en cache les donnees frequemment consultees.
+    
+    \item \textbf{Historique et requetes} : Le systeme permet d'effectuer des requetes historiques pour analyser l'evolution des sentiments dans le temps et generer des rapports d'analyse detailles.
 \end{itemize}
 
 Ces fonctionnalites doivent etre developpees en tenant compte des meilleures pratiques de l'UX/UI pour assurer une facilite d'utilisation et engager activement les utilisateurs avec l'application d'analyse.
@@ -62,17 +67,19 @@ Ces fonctionnalites doivent etre developpees en tenant compte des meilleures pra
 Pour completer les besoins fonctionnels, notre projet devra respecter quelques proprietes contribuant a une meilleure qualite de la solution obtenue. Parmi ces criteres, on retrouve :
 
 \begin{itemize}
-    \item \textbf{Performance} : Il s'agit d'optimiser le temps de traitement des donnees textuelles ainsi que d'utiliser les bonnes pratiques du developpement. L'analyse de sentiments doit etre rapide et efficace meme avec de gros volumes de donnees.
+    \item \textbf{Performance} : Il s'agit d'optimiser le temps de traitement des donnees textuelles ainsi que d'utiliser les bonnes pratiques du developpement. L'analyse de sentiments doit etre rapide et efficace meme avec de gros volumes de donnees. Redis ameliore significativement les performances en mettant en cache les resultats frequemment demandes.
     
     \item \textbf{Evolutivite} : L'application doit pouvoir integrer de nouveaux modeles d'analyse, de nouvelles sources de donnees ou de nouvelles fonctionnalites sans modifier les modules deja existants.
     
-    \item \textbf{Securite} : L'acces a l'application et aux donnees doit etre securise. Pour gerer les autorisations aux differents modules de l'application, nous utilisons Keycloak pour l'authentification et Spring Gateway pour la securisation des APIs.
+    \item \textbf{Securite} : L'acces a l'application et aux donnees doit etre securise. Pour gerer les autorisations aux differents modules de l'application, nous utilisons Keycloak pour l'authentification et Spring comme API Gateway pour la securisation des APIs.
     
     \item \textbf{Haute disponibilite} : L'application doit etre disponible en permanence, minimisant les temps d'arret et assurant un fonctionnement continu meme en cas de defaillance d'une partie du systeme.
     
-    \item \textbf{Scalabilite} : Le systeme doit pouvoir gerer une augmentation du volume de donnees a analyser et du nombre d'utilisateurs simultanement connectes.
+    \item \textbf{Scalabilite} : Le systeme doit pouvoir gerer une augmentation du volume de donnees a analyser et du nombre d'utilisateurs simultanement connectes. L'architecture microservices avec Spring Gateway facilite cette scalabilite.
     
-    \item \textbf{Precision d'analyse} : Les resultats d'analyse de sentiments doivent etre fiables et precis, avec un taux d'erreur minimal pour garantir la qualite des insights generes.
+    \item \textbf{Precision d'analyse} : Les resultats d'analyse de sentiments doivent etre fiables et precis, avec un taux d'erreur minimal pour garantir la qualite des insights generes grace au modele cardiffnlp/twitter-xlm-roberta-base-sentiment.
+    
+    \item \textbf{Persistence des donnees} : PostgreSQL assure la persistance et l'integrite des donnees collectees et analysees, avec des mecanismes de sauvegarde et de restauration robustes.
 \end{itemize}
 
 \section{Fonctionnalites attendues}
@@ -156,39 +163,46 @@ Les cas d'utilisation detailles illustrent les interactions typiques entre les u
 
 Ces cas d'utilisation representent des interactions frequentes et essentielles qui doivent etre prises en compte pour une experience utilisateur coherente et satisfaisante dans le contexte de l'analyse de sentiments.
 
-\section{Backlog Produit}
+\section{Backlog Produit et Plan de Release}
 
-Le developpement de notre application d'analyse de sentiments s'est structure autour d'un backlog produit bien defini, comprenant plusieurs epopees et user stories. Chaque user story a ete accompagnee de criteres d'acceptation clairs pour garantir la qualite et la conformite aux attentes.
+Le developpement de notre application de detection de sentiments s'est structure autour d'un plan de release en 4 sprints, tel que realise au centre de formation Code 212. Chaque sprint a ete accompagne d'objectifs clairs et de criteres d'acceptation pour garantir la qualite et la conformite aux attentes.
 
-\subsection{Epopee 1 : Infrastructure et Configuration}
+\subsection{Sprint 1 : Configuration de l'environnement et authentification}
+
+\textbf{Objectif} : Configuration de l'environnement de developpement (Next.js, FastAPI, Spring) et mise en place de l'authentification via Keycloak.
 
 \textbf{User Story 1.1 : Configuration de l'environnement de developpement}
 \begin{itemize}
     \item En tant que developpeur
-    \item Je veux configurer l'environnement avec Next.js, FastAPI, Keycloak et Spring Gateway
+    \item Je veux configurer l'environnement avec Next.js, FastAPI, Spring et PostgreSQL
     \item Afin de disposer d'une base technique solide
     \item \textbf{Criteres d'acceptation :}
     \begin{itemize}
+        \item Next.js est configure et operationnel pour le frontend
+        \item FastAPI est configure pour le backend
+        \item Spring est configure comme API Gateway
+        \item PostgreSQL est installe et configure
         \item Tous les services sont deployes et communicants
-        \item L'authentification Keycloak fonctionne correctement
-        \item L'API Gateway route les requetes appropriees
     \end{itemize}
 \end{itemize}
 
-\textbf{User Story 1.2 : Integration du modele d'analyse de sentiments}
+\textbf{User Story 1.2 : Mise en place de l'authentification avec Keycloak}
 \begin{itemize}
     \item En tant que developpeur
-    \item Je veux integrer le modele cardiffnlp/twitter-xlm-roberta-base-sentiment
-    \item Afin de pouvoir analyser les sentiments des textes
+    \item Je veux integrer Keycloak pour l'authentification
+    \item Afin de securiser l'acces a l'application
     \item \textbf{Criteres d'acceptation :}
     \begin{itemize}
-        \item Le modele est charge et operationnel
-        \item L'API d'analyse retourne des predictions precises
-        \item Le support multilingue (arabe, français) fonctionne
+        \item Keycloak est installe et configure
+        \item L'authentification fonctionne correctement
+        \item L'integration avec Spring Gateway est operative
+        \item Les roles utilisateurs sont definis
     \end{itemize}
 \end{itemize}
 
-\subsection{Epopee 2 : Collecte et Traitement des Donnees}
+\subsection{Sprint 2 : Web scraping et API de donnees}
+
+\textbf{Objectif} : Developpement du module de web scraping avec Selenium, pretraitement et nettoyage des donnees avec Pandas, et initialisation de l'API de recuperation des donnees.
 
 \textbf{User Story 2.1 : Developpement du module de web scraping}
 \begin{itemize}
@@ -198,40 +212,77 @@ Le developpement de notre application d'analyse de sentiments s'est structure au
     \item \textbf{Criteres d'acceptation :}
     \begin{itemize}
         \item Selenium collecte les commentaires sans erreur
-        \item Les donnees sont structurees et stockees correctement
+        \item Les donnees sont structurees et stockees dans PostgreSQL
         \item Le processus est configurable et planifiable
+        \item Gestion des erreurs et des timeouts
     \end{itemize}
 \end{itemize}
 
-\textbf{User Story 2.2 : Preprocessing et nettoyage des donnees}
+\textbf{User Story 2.2 : Pretraitement et nettoyage des donnees avec Pandas}
 \begin{itemize}
     \item En tant que systeme
-    \item Je veux nettoyer et preprocesser les textes collectes
+    \item Je veux nettoyer et preprocesser les textes collectes avec Pandas
     \item Afin d'ameliorer la qualite de l'analyse
     \item \textbf{Criteres d'acceptation :}
     \begin{itemize}
         \item Les textes sont normalises et nettoyes
         \item Les caracteres speciaux et spam sont filtres
-        \item Les donnees sont prete pour l'analyse
+        \item Les donnees sont formatees pour l'analyse
+        \item Pipeline de preprocessing automatise
     \end{itemize}
 \end{itemize}
 
-\subsection{Epopee 3 : Interface Utilisateur et Visualisation}
+\textbf{User Story 2.3 : API de recuperation des donnees}
+\begin{itemize}
+    \item En tant que developpeur
+    \item Je veux creer une API pour acceder aux donnees collectees
+    \item Afin de fournir un acces structure aux donnees
+    \item \textbf{Criteres d'acceptation :}
+    \begin{itemize}
+        \item API RESTful avec FastAPI
+        \item Endpoints pour recuperer les commentaires
+        \item Pagination et filtres implementes
+        \item Integration avec Redis pour le cache
+    \end{itemize}
+\end{itemize}
 
-\textbf{User Story 3.1 : Developpement du tableau de bord}
+\subsection{Sprint 3 : Integration du modele d'analyse et tableau de bord}
+
+\textbf{Objectif} : Integration du modele d'analyse de sentiment (cardiffnlp/twitter-xlm-roberta-base-sentiment de Hugging Face) et demarrage du tableau de bord de visualisation.
+
+\textbf{User Story 3.1 : Integration du modele d'analyse de sentiments}
+\begin{itemize}
+    \item En tant que developpeur
+    \item Je veux integrer le modele cardiffnlp/twitter-xlm-roberta-base-sentiment
+    \item Afin de pouvoir analyser les sentiments des textes
+    \item \textbf{Criteres d'acceptation :}
+    \begin{itemize}
+        \item Le modele Hugging Face est charge et operationnel
+        \item L'API d'analyse retourne des predictions precises
+        \item Le support multilingue (arabe, français) fonctionne
+        \item Performance optimisee avec mise en cache Redis
+    \end{itemize}
+\end{itemize}
+
+\textbf{User Story 3.2 : Developpement du tableau de bord avec Next.js}
 \begin{itemize}
     \item En tant qu'analyste
     \item Je veux visualiser les resultats d'analyse sur un tableau de bord interactif
     \item Afin de comprendre les tendances de sentiments
     \item \textbf{Criteres d'acceptation :}
     \begin{itemize}
-        \item Le tableau de bord affiche les metriques en temps reel
-        \item Les graphiques sont interactifs et informatifs
-        \item Les filtres permettent d'affiner les donnees
+        \item Interface Next.js responsive et moderne
+        \item Graphiques en temps reel et interactifs
+        \item Filtres pour affiner les donnees
+        \item Integration avec l'API d'analyse
     \end{itemize}
 \end{itemize}
 
-\textbf{User Story 3.2 : Generation de rapports}
+\subsection{Sprint 4 : Generation de rapports et tests}
+
+\textbf{Objectif} : Generation automatique des rapports d'analyse et phase complete de tests fonctionnels.
+
+\textbf{User Story 4.1 : Generation automatique de rapports}
 \begin{itemize}
     \item En tant que decideur
     \item Je veux generer des rapports detailles sur les analyses
@@ -239,20 +290,26 @@ Le developpement de notre application d'analyse de sentiments s'est structure au
     \item \textbf{Criteres d'acceptation :}
     \begin{itemize}
         \item Les rapports sont generes automatiquement
-        \item Plusieurs formats d'export sont supportes
+        \item Plusieurs formats d'export sont supportes (PDF, Excel, CSV)
         \item Les donnees sont precises et a jour
+        \item Planification automatique des rapports
     \end{itemize}
 \end{itemize}
 
-\subsection{Sprint Plan}
-
-\textbf{Sprint 1} : Configuration de l'environnement (User Story 1.1), Integration du modele d'analyse (User Story 1.2)
-
-\textbf{Sprint 2} : Developpement du web scraping (User Story 2.1), Preprocessing des donnees (User Story 2.2)
-
-\textbf{Sprint 3} : Developpement du tableau de bord (User Story 3.1), Interface d'authentification
-
-\textbf{Sprint 4} : Generation de rapports (User Story 3.2), Optimisation et deploiement
+\textbf{User Story 4.2 : Tests fonctionnels complets}
+\begin{itemize}
+    \item En tant que developpeur
+    \item Je veux effectuer des tests complets de l'application
+    \item Afin de garantir la qualite et la fiabilite du systeme
+    \item \textbf{Criteres d'acceptation :}
+    \begin{itemize}
+        \item Tests unitaires pour tous les modules
+        \item Tests d'integration entre services
+        \item Tests de performance et de charge
+        \item Tests de securite et d'authentification
+        \item Documentation complete des tests
+    \end{itemize}
+\end{itemize}
 
 \section{PLANIFICATION DU PROJET}
 
@@ -300,23 +357,35 @@ Le diagramme de classes est essentiel pour visualiser la structure statique de l
 
 \section{Architecture du Systeme}
 
-L'architecture de l'application d'analyse de sentiments suit une approche microservices moderne, integrant les technologies specifiees pour assurer performance, scalabilite et maintenabilite.
-
+L'architecture de l'application de detection de sentiments suit une approche microservices moderne, integrant les technologies specifiees dans le cadre du stage au centre de formation Code 212 pour assurer performance, scalabilite et maintenabilite.
 
 \subsection{Composants de l'architecture}
 
 \begin{itemize}
-    \item \textbf{Frontend (Next.js)} : Interface utilisateur reactive et moderne
-    \item \textbf{API Gateway (Spring)} : Point d'entree unique pour toutes les requetes
-    \item \textbf{Service d'authentification (Keycloak)} : Gestion securisee des utilisateurs
-    \item \textbf{Service de collecte (Selenium + FastAPI)} : Web scraping automatise
-    \item \textbf{Service d'analyse (FastAPI + XLM-RoBERTa)} : Traitement et analyse des sentiments
-    \item \textbf{Base de donnees} : Stockage des donnees collectees et des resultats
+    \item \textbf{Frontend (Next.js)} : Interface utilisateur reactive et moderne pour la visualisation des donnees et tableaux de bord
+    \item \textbf{API Gateway (Spring)} : Point d'entree unique pour toutes les requetes, servant d'API Gateway pour router et securiser les communications
+    \item \textbf{Service d'authentification (Keycloak)} : Gestion securisee des utilisateurs, des roles et des permissions
+    \item \textbf{Service de collecte (Selenium + FastAPI)} : Web scraping automatise des commentaires Hespress avec Selenium integre dans FastAPI
+    \item \textbf{Service d'analyse (FastAPI + cardiffnlp/twitter-xlm-roberta-base-sentiment)} : Traitement et analyse des sentiments avec le modele Hugging Face
+    \item \textbf{Base de donnees principale (PostgreSQL)} : Stockage persistant des donnees collectees, des resultats d'analyse et des metadonnees
+    \item \textbf{Systeme de cache (Redis)} : Mise en cache des resultats d'analyse et optimisation des performances
+    \item \textbf{Module de pretraitement (Pandas)} : Nettoyage et preparation des donnees textuelles avant analyse
 \end{itemize}
+
+\subsection{Flux de donnees}
+
+\begin{enumerate}
+    \item \textbf{Collecte} : Selenium scrape les commentaires d'Hespress
+    \item \textbf{Pretraitement} : Pandas nettoie et formate les donnees
+    \item \textbf{Stockage} : Les donnees brutes sont stockees dans PostgreSQL
+    \item \textbf{Analyse} : Le modele cardiffnlp/twitter-xlm-roberta-base-sentiment analyse les sentiments
+    \item \textbf{Cache} : Redis met en cache les resultats pour optimiser les performances
+    \item \textbf{Visualisation} : Next.js affiche les resultats via des tableaux de bord interactifs
+\end{enumerate}
 
 \section{Conclusion de Conception}
 
-La conception de l'application d'analyse de sentiments suppose la creation d'une architecture robuste et evolutive qui repond aux besoins fonctionnels tout en offrant une experience utilisateur transparente et performante. Les diagrammes et modeles presentes dans ce chapitre constituent le socle pour les developpements futurs et pour l'implementation du systeme.
+La conception de l'application de detection de sentiments, realisee dans le cadre du stage au centre de formation Code 212, suppose la creation d'une architecture robuste et evolutive qui repond aux besoins fonctionnels tout en offrant une experience utilisateur transparente et performante. Les diagrammes et modeles presentes dans ce chapitre constituent le socle pour les developpements futurs et pour l'implementation du systeme selon le plan de release en 4 sprints.
 
-L'integration des technologies modernes (Next.js, FastAPI, Keycloak, Spring Gateway) avec des modeles d'IA avances (XLM-RoBERTa) permet de creer une solution complete pour l'analyse automatisee des sentiments dans les commentaires d'Hespress. Cette approche garantit une analyse precise, scalable et securisee des opinions publiques exprimees en ligne.
+L'integration des technologies modernes (Next.js, FastAPI, Keycloak, Spring comme API Gateway, PostgreSQL, Redis) avec le modele d'IA avance cardiffnlp/twitter-xlm-roberta-base-sentiment permet de creer une solution complete pour l'analyse automatisee des sentiments dans les commentaires d'Hespress. Cette approche garantit une analyse precise, scalable et securisee des opinions publiques exprimees en ligne, avec des capacites de pretraitement avancees grace a Pandas et des performances optimisees par la mise en cache Redis.
 
