@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Class Diagram - Sentiment Analysis App" id="class-diagram">
-        <mxGraphModel dx="1014" dy="1891" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+        <mxGraphModel dx="862" dy="1770" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -131,16 +131,16 @@
                     <mxGeometry y="40" width="150" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="NextJSFrontend" value="&lt;&lt;Frontend&gt;&gt;&#xa;Next.js Application" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#e1f5fe;strokeColor=#0277bd;" parent="1" vertex="1">
-                    <mxGeometry x="560" y="440" width="200" height="200" as="geometry"/>
+                    <mxGeometry x="560" y="440" width="200" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="NextJSFrontend-components" value="Components:&#xa;- Dashboard&#xa;- CommentsList&#xa;- SentimentChart&#xa;- LoginForm&#xa;- StatisticsPanel&#xa;- SearchBar&#xa;- ExportButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="NextJSFrontend" vertex="1">
-                    <mxGeometry y="40" width="200" height="120" as="geometry"/>
+                    <mxGeometry y="40" width="200" height="128" as="geometry"/>
                 </mxCell>
                 <mxCell id="NextJSFrontend-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="NextJSFrontend" vertex="1">
-                    <mxGeometry y="160" width="200" height="8" as="geometry"/>
+                    <mxGeometry y="168" width="200" height="8" as="geometry"/>
                 </mxCell>
                 <mxCell id="NextJSFrontend-methods" value="+renderDashboard(): JSX&#xa;+handleAuth(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="NextJSFrontend" vertex="1">
-                    <mxGeometry y="168" width="200" height="32" as="geometry"/>
+                    <mxGeometry y="176" width="200" height="34" as="geometry"/>
                 </mxCell>
                 <mxCell id="user-role-rel" style="endArrow=open;endFill=1;endSize=12;html=1;" parent="1" source="User" target="UserRole" edge="1">
                     <mxGeometry width="160" relative="1" as="geometry">
