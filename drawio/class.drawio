@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Database Schema - Sentiment Analysis App" id="database-schema">
-        <mxGraphModel dx="1322" dy="858" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+        <mxGraphModel dx="793" dy="515" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -40,7 +40,7 @@
                 <mxCell id="reports-attrs" value="id: UUID [PK]&#xa;user_id: UUID [FK]&#xa;title: VARCHAR(255)&#xa;type: report_type_enum&#xa;date_from: DATE&#xa;date_to: DATE&#xa;file_path: VARCHAR(500)&#xa;status: report_status_enum&#xa;generated_at: TIMESTAMP&#xa;created_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="reports-table" vertex="1">
                     <mxGeometry y="30" width="250" height="190" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="cache-entries-table" target="users-attrs">
+                <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" source="cache-entries-table" target="users-attrs" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="cache-entries-table" value="cache_entries" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
@@ -73,13 +73,13 @@
                 <mxCell id="enums-content" value="user_role_enum:&#xa;  - ADMIN&#xa;  - USER&#xa;  - MODERATOR&#xa;&#xa;sentiment_enum:&#xa;  - POSITIVE&#xa;  - NEGATIVE&#xa;  - NEUTRAL&#xa;&#xa;job_status_enum:&#xa;  - PENDING&#xa;  - RUNNING&#xa;  - COMPLETED&#xa;  - FAILED&#xa;  - CANCELLED&#xa;&#xa;report_type_enum:&#xa;  - DAILY&#xa;  - WEEKLY&#xa;  - MONTHLY&#xa;  - CUSTOM&#xa;&#xa;report_status_enum:&#xa;  - GENERATING&#xa;  - COMPLETED&#xa;  - FAILED&#xa;&#xa;log_level_enum:&#xa;  - ERROR&#xa;  - WARN&#xa;  - INFO&#xa;  - DEBUG" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="enums-legend" vertex="1">
                     <mxGeometry y="30" width="350" height="490" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.568;entryY=1.004;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="reports-table" target="users-attrs">
+                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.568;entryY=1.004;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" parent="1" source="reports-table" target="users-attrs" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.526;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="users-table" target="articles-attrs">
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.526;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" parent="1" source="users-table" target="articles-attrs" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="system-logs-attrs" target="users-table">
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="system-logs-attrs" target="users-table" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="345" y="445"/>
@@ -88,7 +88,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="23" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="comments-attrs" target="articles-attrs">
+                <mxCell id="23" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" parent="1" source="comments-attrs" target="articles-attrs" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>

@@ -1,152 +1,178 @@
 <mxfile host="65bd71144e">
     <diagram name="Sprint 1 - Class Diagram" id="sprint1-class-diagram">
-        <mxGraphModel dx="862" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1220" dy="718" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="&lt;&lt;Configuration&gt;&gt;&#xa;AppConfig" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-                    <mxGeometry x="50" y="50" width="280" height="200" as="geometry"/>
+                <mxCell id="frontend-layer" value="Frontend Layer (Next.js)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="50" width="300" height="300" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="-databaseUrl: String&#xa;-redisUrl: String&#xa;-modelPath: String&#xa;-environment: String&#xa;-logLevel: String&#xa;-maxConnections: Integer" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="40" width="280" height="114" as="geometry"/>
+                <mxCell id="auth-component" value="AuthComponent" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="120" width="240" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="154" width="280" height="9" as="geometry"/>
+                <mxCell id="auth-component-attrs" value="- isAuthenticated: boolean&#xa;- user: User | null&#xa;- token: string | null" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="auth-component" vertex="1">
+                    <mxGeometry y="30" width="240" height="66" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="+loadConfiguration(): void&#xa;+validateConfiguration(): Boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="163" width="280" height="37" as="geometry"/>
+                <mxCell id="auth-component-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="auth-component" vertex="1">
+                    <mxGeometry y="96" width="240" height="19" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="&lt;&lt;Configuration&gt;&gt;&#xa;DatabaseConfig" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-                    <mxGeometry x="380" y="50" width="260" height="180" as="geometry"/>
+                <mxCell id="auth-component-methods" value="+ login(): void&#xa;+ logout(): void&#xa;+ getToken(): string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="auth-component" vertex="1">
+                    <mxGeometry y="115" width="240" height="55" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="-host: String&#xa;-port: Integer&#xa;-database: String&#xa;-username: String&#xa;-password: String&#xa;-poolSize: Integer" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="6" vertex="1">
-                    <mxGeometry y="40" width="260" height="112" as="geometry"/>
+                <mxCell id="user-model" value="User" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="120" width="200" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="6" vertex="1">
-                    <mxGeometry y="152" width="260" height="9" as="geometry"/>
+                <mxCell id="user-model-attrs" value="- id: string&#xa;- email: string&#xa;- firstName: string&#xa;- lastName: string&#xa;- role: UserRole&#xa;- keycloakId: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="user-model" vertex="1">
+                    <mxGeometry y="30" width="200" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="+createConnection(): Connection" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="6" vertex="1">
-                    <mxGeometry y="161" width="260" height="19" as="geometry"/>
+                <mxCell id="user-model-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="user-model" vertex="1">
+                    <mxGeometry y="110" width="200" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="&lt;&lt;Configuration&gt;&gt;&#xa;RedisConfig" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
-                    <mxGeometry x="680" y="50" width="240" height="140" as="geometry"/>
+                <mxCell id="user-model-methods" value="+ getFullName(): string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="user-model" vertex="1">
+                    <mxGeometry y="118" width="200" height="22" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="-host: String&#xa;-port: Integer&#xa;-password: String&#xa;-database: Integer&#xa;-timeout: Integer" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="10" vertex="1">
-                    <mxGeometry y="40" width="240" height="80" as="geometry"/>
+                <mxCell id="api-gateway" value="ApiGateway" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="410" width="260" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="10" vertex="1">
-                    <mxGeometry y="120" width="240" height="8" as="geometry"/>
+                <mxCell id="api-gateway-attrs" value="- routes: List&lt;Route&gt;&#xa;- filters: List&lt;Filter&gt;&#xa;- corsConfiguration: CorsConfig" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="api-gateway" vertex="1">
+                    <mxGeometry y="30" width="260" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="+createClient(): RedisClient" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="10" vertex="1">
-                    <mxGeometry y="128" width="240" height="12" as="geometry"/>
+                <mxCell id="api-gateway-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="api-gateway" vertex="1">
+                    <mxGeometry y="80" width="260" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="&lt;&lt;Model&gt;&gt;&#xa;CardiffNLPModel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
-                    <mxGeometry x="50" y="300" width="320" height="200" as="geometry"/>
+                <mxCell id="api-gateway-methods" value="+ routeRequest(request: Request): Response&#xa;+ applyFilters(request: Request): Request" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="api-gateway" vertex="1">
+                    <mxGeometry y="88" width="260" height="32" as="geometry"/>
                 </mxCell>
-                <mxCell id="15" value="-modelName: String = &quot;cardiffnlp/twitter-xlm-roberta-base-sentiment&quot;&#xa;-tokenizer: AutoTokenizer&#xa;-model: AutoModelForSequenceClassification&#xa;-device: String&#xa;-maxLength: Integer = 512&#xa;-isLoaded: Boolean = False" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="14" vertex="1">
-                    <mxGeometry y="40" width="320" height="96" as="geometry"/>
+                <mxCell id="auth-filter" value="AuthenticationFilter" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="320" width="220" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="14" vertex="1">
-                    <mxGeometry y="136" width="320" height="8" as="geometry"/>
+                <mxCell id="auth-filter-attrs" value="- keycloakService: KeycloakService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="auth-filter" vertex="1">
+                    <mxGeometry y="30" width="220" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" value="+loadModel(): void&#xa;+downloadModel(): void&#xa;+validateModel(): Boolean&#xa;+getModelInfo(): ModelInfo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="14" vertex="1">
-                    <mxGeometry y="144" width="320" height="56" as="geometry"/>
+                <mxCell id="auth-filter-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="auth-filter" vertex="1">
+                    <mxGeometry y="60" width="220" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="&lt;&lt;Service&gt;&gt;&#xa;SentimentAnalyzer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-                    <mxGeometry x="420" y="300" width="280" height="180" as="geometry"/>
+                <mxCell id="auth-filter-methods" value="+ filter(request: Request): boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="auth-filter" vertex="1">
+                    <mxGeometry y="68" width="220" height="32" as="geometry"/>
                 </mxCell>
-                <mxCell id="19" value="-model: CardiffNLPModel&#xa;-preprocessor: TextPreprocessor&#xa;-cache: RedisClient&#xa;-batchSize: Integer = 32" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="18" vertex="1">
-                    <mxGeometry y="40" width="280" height="64" as="geometry"/>
+                <mxCell id="backend-layer" value="Backend Layer (FastAPI)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="50" width="300" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="20" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="18" vertex="1">
-                    <mxGeometry y="104" width="280" height="8" as="geometry"/>
+                <mxCell id="auth-controller" value="AuthController" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="120" width="240" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="+initialize(): void&#xa;+predict(text: String): SentimentResult&#xa;+batchPredict(texts: List&lt;String&gt;): List&lt;SentimentResult&gt;&#xa;+getCachedResult(text: String): SentimentResult" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="18" vertex="1">
-                    <mxGeometry y="112" width="280" height="68" as="geometry"/>
+                <mxCell id="auth-controller-attrs" value="- authService: AuthService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="auth-controller" vertex="1">
+                    <mxGeometry y="30" width="240" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="&lt;&lt;Utility&gt;&gt;&#xa;TextPreprocessor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-                    <mxGeometry x="750" y="300" width="240" height="160" as="geometry"/>
+                <mxCell id="auth-controller-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="auth-controller" vertex="1">
+                    <mxGeometry y="60" width="240" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" value="-stopWords: Set&lt;String&gt;&#xa;-maxLength: Integer&#xa;-minLength: Integer" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="22" vertex="1">
-                    <mxGeometry y="40" width="240" height="48" as="geometry"/>
+                <mxCell id="auth-controller-methods" value="+ login(credentials: LoginDto): TokenDto&#xa;+ validateToken(token: string): UserDto&#xa;+ refreshToken(token: string): TokenDto" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="auth-controller" vertex="1">
+                    <mxGeometry y="68" width="240" height="52" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="22" vertex="1">
-                    <mxGeometry y="88" width="240" height="8" as="geometry"/>
+                <mxCell id="auth-service" value="AuthService" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#e6e6e6;strokeColor=#999999;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="280" width="240" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="25" value="+cleanText(text: String): String&#xa;+tokenize(text: String): List&lt;String&gt;&#xa;+removeStopWords(tokens: List&lt;String&gt;): List&lt;String&gt;&#xa;+validateLength(text: String): Boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="22" vertex="1">
-                    <mxGeometry y="96" width="240" height="64" as="geometry"/>
+                <mxCell id="auth-service-attrs" value="- keycloakClient: KeycloakClient&#xa;- userRepository: UserRepository" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="auth-service" vertex="1">
+                    <mxGeometry y="30" width="240" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="26" value="&lt;&lt;Entity&gt;&gt;&#xa;SentimentResult" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-                    <mxGeometry x="50" y="550" width="260" height="140" as="geometry"/>
+                <mxCell id="auth-service-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="auth-service" vertex="1">
+                    <mxGeometry y="70" width="240" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="27" value="-sentiment: SentimentType&#xa;-confidence: Float&#xa;-scores: Map&lt;String, Float&gt;&#xa;-processedText: String&#xa;-timestamp: DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="26" vertex="1">
-                    <mxGeometry y="40" width="260" height="80" as="geometry"/>
+                <mxCell id="auth-service-methods" value="+ authenticateUser(email, password): User&#xa;+ validateToken(token: string): boolean&#xa;+ getUserFromToken(token: string): User&#xa;+ refreshAccessToken(token: string): string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="auth-service" vertex="1">
+                    <mxGeometry y="78" width="240" height="62" as="geometry"/>
                 </mxCell>
-                <mxCell id="28" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="26" vertex="1">
-                    <mxGeometry y="120" width="260" height="8" as="geometry"/>
+                <mxCell id="keycloak-service" value="KeycloakService" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#ffc0cb;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="480" width="280" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="29" value="+isValid(): Boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="26" vertex="1">
-                    <mxGeometry y="128" width="260" height="12" as="geometry"/>
+                <mxCell id="keycloak-service-attrs" value="- keycloakUrl: string&#xa;- realm: string&#xa;- clientId: string&#xa;- clientSecret: string&#xa;- adminClient: KeycloakAdminClient" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="keycloak-service" vertex="1">
+                    <mxGeometry y="30" width="280" height="92" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value="&lt;&lt;Enumeration&gt;&gt;&#xa;SentimentType" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
-                    <mxGeometry x="350" y="550" width="140" height="100" as="geometry"/>
+                <mxCell id="keycloak-service-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="keycloak-service" vertex="1">
+                    <mxGeometry y="122" width="280" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="POSITIVE&#xa;NEGATIVE&#xa;NEUTRAL" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="30" vertex="1">
-                    <mxGeometry y="40" width="140" height="60" as="geometry"/>
+                <mxCell id="keycloak-service-methods" value="+ login(username, password): AccessToken&#xa;+ validateToken(token: string): TokenInfo&#xa;+ createUser(userDto: CreateUserDto): User&#xa;+ getUserInfo(token: string): UserInfo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="keycloak-service" vertex="1">
+                    <mxGeometry y="132" width="280" height="68" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="&lt;&lt;Entity&gt;&gt;&#xa;ModelInfo" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-                    <mxGeometry x="530" y="550" width="200" height="166" as="geometry"/>
+                <mxCell id="user-repository" value="UserRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="500" width="280" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" value="-version: String&#xa;-size: Long&#xa;-lastUpdated: DateTime&#xa;-accuracy: Float" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="32" vertex="1">
-                    <mxGeometry y="40" width="200" height="93" as="geometry"/>
+                <mxCell id="user-repository-attrs" value="- database: Database" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="user-repository" vertex="1">
+                    <mxGeometry y="30" width="280" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="34" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="32" vertex="1">
-                    <mxGeometry y="133" width="200" height="20" as="geometry"/>
+                <mxCell id="user-repository-line" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="user-repository" vertex="1">
+                    <mxGeometry y="60" width="280" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="35" value="+toString(): String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="32" vertex="1">
-                    <mxGeometry y="153" width="200" height="13" as="geometry"/>
+                <mxCell id="user-repository-methods" value="+ findByEmail(email: string): User | null&#xa;+ findByKeycloakId(id: string): User | null&#xa;+ save(user: User): User" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="user-repository" vertex="1">
+                    <mxGeometry y="68" width="280" height="52" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="2" target="6" edge="1">
+                <mxCell id="login-dto" value="LoginDto" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#d4edda;strokeColor=#28a745;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="700" width="150" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="login-dto-attrs" value="+ email: string&#xa;+ password: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="login-dto" vertex="1">
+                    <mxGeometry y="30" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="token-dto" value="TokenDto" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#d4edda;strokeColor=#28a745;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="700" width="180" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="token-dto-attrs" value="+ accessToken: string&#xa;+ refreshToken: string&#xa;+ expiresIn: number&#xa;+ tokenType: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="token-dto" vertex="1">
+                    <mxGeometry y="30" width="180" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-dto" value="UserDto" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#d4edda;strokeColor=#28a745;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="700" width="150" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-dto-attrs" value="+ id: string&#xa;+ email: string&#xa;+ firstName: string&#xa;+ lastName: string&#xa;+ role: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="user-dto" vertex="1">
+                    <mxGeometry y="30" width="150" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-role-enum" value="&lt;&lt;enumeration&gt;&gt;&#xa;UserRole" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#ffeb3b;strokeColor=#fbc02d;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="700" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-role-enum-values" value="ADMIN&#xa;USER" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="user-role-enum" vertex="1">
+                    <mxGeometry y="50" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel1" value="" style="endArrow=open;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=0;edgeStyle=orthogonalEdgeStyle;dashed=1;" parent="1" source="auth-component-attrs" target="user-model-attrs" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="37" value="uses" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="36" vertex="1" connectable="0">
+                <mxCell id="rel1-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel1" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="-10" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel2" value="" style="endArrow=open;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="api-gateway-attrs" target="auth-filter-attrs" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="2" target="10" edge="1">
+                <mxCell id="rel2-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel2" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="-10" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel3" value="" style="endArrow=open;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endFill=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="auth-filter-attrs" target="keycloak-service-attrs" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="39" value="uses" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="38" vertex="1" connectable="0">
+                <mxCell id="rel3-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel3" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="-10" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel4" value="" style="endArrow=open;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endFill=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="auth-controller" target="auth-service" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="40" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="18" target="14" edge="1">
+                <mxCell id="rel4-label" value="uses" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rel4" vertex="1" connectable="0">
+                    <mxGeometry x="-10" y="-10" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="rel6" value="" style="endArrow=open;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endFill=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="auth-service" target="user-repository" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="41" value="uses" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="40" vertex="1" connectable="0">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="title" value="Sprint 1: Configuration de l&#39;environnement et authentification Keycloak" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="10" width="600" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="42" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="18" target="22" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="legend" value="Légende" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#f5f5f5;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="860" y="700" width="200" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="43" value="uses" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="42" vertex="1" connectable="0">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="legend-content" value="🔵 Frontend (Next.js)&#xa;🟠 API Gateway (Spring)&#xa;🟡 Backend (FastAPI)&#xa;🔴 Keycloak Integration&#xa;🟢 DTOs&#xa;🟨 Enums" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="legend" vertex="1">
+                    <mxGeometry y="30" width="200" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" value="" style="endArrow=open;html=1;endSize=12;startArrow=none;startSize=14;edgeStyle=orthogonalEdgeStyle;" parent="1" source="18" target="26" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="45" value="creates" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="44" vertex="1" connectable="0">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="46" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="26" target="30" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="47" value="uses" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="46" vertex="1" connectable="0">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="48" value="" style="endArrow=open;html=1;endSize=12;startArrow=none;startSize=14;edgeStyle=orthogonalEdgeStyle;" parent="1" source="14" target="32" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="49" value="provides" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="48" vertex="1" connectable="0">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="2" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.292;entryY=1.032;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="keycloak-service" target="auth-service-methods">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="660" y="440"/>
+                            <mxPoint x="800" y="440"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>
