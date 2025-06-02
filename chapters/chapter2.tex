@@ -41,34 +41,19 @@ En repondant a ces besoins, l'application d'analyse de sentiments represente un 
 
 La specification des fonctionnalites traduit les besoins utilisateurs en caracteristiques techniques et operationnelles concretes de l'application d'analyse de sentiments. Cette section detaille les fonctionnalites essentielles requises pour repondre aux exigences des analystes et des decideurs.
 
-\begin{table}[H]
-\centering
-\begin{tabularx}{\textwidth}{|l|l|X|}
-\hline
-\textbf{Fonctionnalite} & \textbf{Composant} & \textbf{Description} \\
-\hline
-Collecte de donnees & Selenium + FastAPI & 
-Collecte automatisee des commentaires d'Hespress avec configuration des parametres de scraping et gestion des sessions. \\
-\hline
-Analyse de sentiments & cardiffnlp/twitter-xlm-roberta-base-sentiment & 
-Classification automatique des sentiments avec support multilingue (arabe, français, darija) et scoring de confiance. \\
-\hline
-Tableau de bord analytique & Next.js Frontend & 
-Interface interactive pour visualiser les resultats d'analyse avec graphiques en temps reel et filtres avances. \\
-\hline
-Gestion des utilisateurs & Keycloak & 
-Authentification securisee, gestion des roles et controle d'acces aux fonctionnalites selon les privileges. \\
-\hline
-API Gateway & Spring Gateway & 
-Gestion centralisee des requetes, load balancing, et securisation des communications entre microservices. \\
-\hline
-Stockage et historique & Base de donnees & 
-Sauvegarde des donnees collectees et des resultats d'analyse avec possibilite de requetes historiques. \\
-\hline
-\end{tabularx}
-\caption{Specification des fonctionnalites de l'application d'analyse de sentiments}
-\label{tab:spec-fonctionnalites}
-\end{table}
+\begin{itemize}
+    \item \textbf{Collecte de donnees} : Le module de collecte utilise \textbf{Selenium + FastAPI} pour assurer une collecte automatisee des commentaires d'Hespress. Cette fonctionnalite permet la configuration des parametres de scraping et la gestion des sessions, offrant ainsi une solution robuste pour l'acquisition continue de donnees textuelles.
+    
+    \item \textbf{Analyse de sentiments} : L'analyse est realisee grace au modele \textbf{cardiffnlp/twitter-xlm-roberta-base-sentiment}, qui assure une classification automatique des sentiments avec un support multilingue (arabe, français, darija) et un scoring de confiance pour chaque prediction.
+    
+    \item \textbf{Tableau de bord analytique} : Le frontend developpe avec \textbf{Next.js} offre une interface interactive permettant de visualiser les resultats d'analyse. Il integre des graphiques en temps reel et des filtres avances pour une exploration approfondie des donnees.
+    
+    \item \textbf{Gestion des utilisateurs} : \textbf{Keycloak} assure l'authentification securisee, la gestion des roles et le controle d'acces aux fonctionnalites selon les privileges des utilisateurs, garantissant ainsi la securite et la confidentialite des donnees.
+    
+    \item \textbf{API Gateway} : \textbf{Spring Gateway} centralise la gestion des requetes, assure le load balancing et securise les communications entre les differents microservices de l'architecture.
+    
+    \item \textbf{Stockage et historique} : La base de donnees permet la sauvegarde des donnees collectees et des resultats d'analyse, avec la possibilite d'effectuer des requetes historiques pour analyser l'evolution des sentiments dans le temps.
+\end{itemize}
 
 Ces fonctionnalites doivent etre developpees en tenant compte des meilleures pratiques de l'UX/UI pour assurer une facilite d'utilisation et engager activement les utilisateurs avec l'application d'analyse.
 
