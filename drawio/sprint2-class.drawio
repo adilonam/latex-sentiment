@@ -1,0 +1,59 @@
+<mxfile host="65bd71144e">
+    <diagram name="Sprint 2 Class Diagram" id="sprint2-class-diagram">
+        <mxGraphModel dx="1850" dy="1050" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="articles-table" target="3">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="630" y="50"/>
+                            <mxPoint x="450" y="50"/>
+                            <mxPoint x="450" y="400"/>
+                            <mxPoint x="645" y="400"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="articles-table" value="articles" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="110" width="280" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="articles-attrs" value="id: UUID [PK]&#xa;user_id: UUID [FK]&#xa;title: VARCHAR(500)&#xa;url: VARCHAR(500) [UNIQUE]&#xa;category: VARCHAR(100)&#xa;publish_date: TIMESTAMP&#xa;author: VARCHAR(255)&#xa;scraped_at: TIMESTAMP&#xa;total_comments: INTEGER&#xa;content: TEXT&#xa;tags: VARCHAR[]&#xa;created_at: TIMESTAMP&#xa;updated_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="articles-table" vertex="1">
+                    <mxGeometry y="30" width="280" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="comments-table" value="comments" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="960" y="100" width="300" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="comments-attrs" value="id: UUID [PK]&#xa;content: TEXT&#xa;author: VARCHAR(255)&#xa;url: VARCHAR(500)&#xa;article_id: UUID [FK]&#xa;publish_date: TIMESTAMP&#xa;scraped_at: TIMESTAMP&#xa;raw_html: TEXT&#xa;cleaned_content: TEXT&#xa;is_processed: BOOLEAN&#xa;preprocessing_status: VARCHAR(50)&#xa;language: VARCHAR(10)&#xa;created_at: TIMESTAMP&#xa;updated_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="comments-table" vertex="1">
+                    <mxGeometry y="30" width="300" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="scraping-jobs-table" value="scraping_jobs" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="860" y="420" width="280" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="scraping-jobs-attrs" value="id: UUID [PK]&#xa;user_id: UUID [FK]&#xa;status: job_status_enum&#xa;start_time: TIMESTAMP&#xa;end_time: TIMESTAMP&#xa;target_url: VARCHAR(500)&#xa;pages_scraped: INTEGER&#xa;comments_found: INTEGER&#xa;articles_found: INTEGER&#xa;errors: TEXT&#xa;selenium_config: JSONB&#xa;retry_count: INTEGER&#xa;max_retries: INTEGER&#xa;progress_percentage: DECIMAL(5,2)&#xa;created_at: TIMESTAMP&#xa;updated_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="scraping-jobs-table" vertex="1">
+                    <mxGeometry y="30" width="280" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="enums-sprint2" value="SPRINT 2 ENUMS" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#f0f0f0;strokeColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="50" width="300" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="enums-sprint2-content" value="job_status_enum:&#xa;  - PENDING&#xa;  - RUNNING&#xa;  - COMPLETED&#xa;  - FAILED&#xa;  - CANCELLED&#xa;  - PAUSED&#xa;&#xa;processing_type_enum:&#xa;  - TEXT_CLEANING&#xa;  - HTML_PARSING&#xa;  - DATA_VALIDATION&#xa;  - LANGUAGE_DETECTION&#xa;  - DUPLICATE_REMOVAL&#xa;&#xa;task_status_enum:&#xa;  - QUEUED&#xa;  - PROCESSING&#xa;  - COMPLETED&#xa;  - FAILED&#xa;  - RETRYING" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="enums-sprint2" vertex="1">
+                    <mxGeometry y="30" width="300" height="270" as="geometry"/>
+                </mxCell>
+                <mxCell id="sprint2-focus" value="SPRINT 2 FOCUS:&#xa;Web Scraping avec Selenium&#xa;Pretraitement des donnees avec Pandas&#xa;API de recuperation des donnees&#xa;Nettoyage et validation des donnees" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="500" width="300" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="articles-attrs" target="comments-attrs">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="users" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;glass=0;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="450" width="250" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="id: UUID [PK]&#xa;email: VARCHAR(255) [UNIQUE]&#xa;first_name: VARCHAR(100)&#xa;last_name: VARCHAR(100)&#xa;role: user_role_enum&#xa;is_active: BOOLEAN&#xa;keycloak_id: VARCHAR(255) [UNIQUE]&#xa;created_at: TIMESTAMP&#xa;updated_at: TIMESTAMP&#xa;last_login: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="3">
+                    <mxGeometry y="30" width="250" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="4" target="scraping-jobs-attrs">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
