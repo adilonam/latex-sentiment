@@ -1,0 +1,165 @@
+% Diagramme de Cas d'Utilisation Sprint 2 - Selenium Scraping et Preprocessing
+% Ce fichier contient un diagramme de cas d'utilisation spécifique pour le Sprint 2
+% focalisé sur le web scraping avec Selenium et le preprocessing des données
+
+\subsection{Cas d'Utilisation Spécifique : Web Scraping Selenium et Preprocessing}
+
+Le Sprint 2 se concentre sur la mise en place d'un système robuste de collecte automatisée des commentaires d'Hespress utilisant Selenium WebDriver, couplé à un pipeline complet de preprocessing des données avec Pandas. Cette section détaille les interactions spécifiques entre les acteurs et le système pour ces fonctionnalités critiques.
+
+\subsubsection{Acteurs Identifiés}
+
+\textbf{Administrateur Système} : Responsable de la configuration et du monitoring du système de scraping Selenium. Il configure les paramètres de collecte, surveille les performances et optimise le processus d'extraction.
+
+\textbf{Analyste de Données} : Utilisateur principal du pipeline de preprocessing. Il lance les processus de nettoyage avec Pandas, valide la qualité des données et exporte les résultats traités pour l'analyse de sentiment.
+
+\textbf{Planificateur Automatique} : Composant système qui gère l'exécution programmée des tâches de scraping, les reprises automatiques en cas d'erreur et la planification périodique de la collecte.
+
+\textbf{Consommateur API} : Applications ou services qui accèdent aux données collectées et prétraitées via l'API REST développée dans ce sprint.
+
+\subsubsection{Cas d'Utilisation Détaillés}
+
+\textbf{CU-S2-01 : Configurer les paramètres de scraping Selenium}
+\begin{itemize}
+    \item \textbf{Acteur Principal} : Administrateur Système
+    \item \textbf{Description} : Configuration des paramètres de collecte automatisée avec Selenium WebDriver pour optimiser l'extraction des commentaires d'Hespress
+    \item \textbf{Prérequis} : Environnement Selenium configuré, accès administrateur
+    \item \textbf{Scénario principal} :
+    \begin{enumerate}
+        \item L'administrateur accède à l'interface de configuration du scraping
+        \item Il définit les URL cibles et les sélecteurs CSS pour les commentaires
+        \item Il configure les délais entre requêtes et les stratégies anti-détection
+        \item Il paramètre la rotation des user agents et les proxies
+        \item Il valide et sauvegarde la configuration
+        \item Le système teste la configuration avec un échantillon de pages
+    \end{enumerate}
+    \item \textbf{Critères d'acceptation} :
+    \begin{itemize}
+        \item Configuration sauvegardée et réutilisable
+        \item Test de validation automatique fonctionnel
+        \item Logs détaillés de configuration disponibles
+        \item Possibilité de rollback vers une configuration précédente
+    \end{itemize}
+\end{itemize}
+
+\textbf{CU-S2-02 : Lancer la collecte automatisée avec Selenium}
+\begin{itemize}
+    \item \textbf{Acteur Principal} : Administrateur Système, Planificateur Automatique
+    \item \textbf{Description} : Déclenchement du processus de collecte automatisée des commentaires via Selenium WebDriver
+    \item \textbf{Prérequis} : Configuration de scraping validée, ressources système disponibles
+    \item \textbf{Scénario principal} :
+    \begin{enumerate}
+        \item Le système initialise l'instance Selenium WebDriver
+        \item Il charge la configuration de scraping définie
+        \item Il navigue séquentiellement sur les pages d'articles Hespress
+        \item Il extrait les commentaires en gérant le contenu JavaScript dynamique
+        \item Il sauvegarde les données brutes avec métadonnées dans la base
+        \item Il génère un rapport de collecte avec statistiques
+    \end{enumerate}
+    \item \textbf{Critères d'acceptation} :
+    \begin{itemize}
+        \item Extraction complète des commentaires avec métadonnées
+        \item Gestion robuste des erreurs et reprises automatiques
+        \item Respect des limitations de débit pour éviter le blocage
+        \item Logs détaillés de l'activité de scraping
+    \end{itemize}
+\end{itemize}
+
+\textbf{CU-S2-03 : Prétraiter les données avec Pandas}
+\begin{itemize}
+    \item \textbf{Acteur Principal} : Analyste de Données
+    \item \textbf{Description} : Application du pipeline de preprocessing sur les données collectées en utilisant les capacités vectorisées de Pandas
+    \item \textbf{Prérequis} : Données brutes collectées, bibliothèques NLP configurées
+    \item \textbf{Scénario principal} :
+    \begin{enumerate}
+        \item L'analyste charge les données brutes dans un DataFrame Pandas
+        \item Il applique les algorithmes de détection de langue (arabe, français, darija)
+        \item Il execute le nettoyage vectorisé des balises HTML et caractères spéciaux
+        \item Il normalise les caractères arabes et supprime les diacritiques
+        \item Il détecte et supprime les doublons avec les méthodes Pandas optimisées
+        \item Il exporte les données nettoyées vers la base de données
+    \end{enumerate}
+    \item \textbf{Critères d'acceptation} :
+    \begin{itemize}
+        \item Traitement performant de gros volumes avec Pandas
+        \item Détection précise de la langue des commentaires
+        \item Suppression efficace des doublons et contenus non pertinents
+        \item Validation de la qualité des données preprocessées
+    \end{itemize}
+\end{itemize}
+
+\textbf{CU-S2-04 : Gérer le contenu JavaScript dynamique}
+\begin{itemize}
+    \item \textbf{Acteur Principal} : Système Selenium (automatique)
+    \item \textbf{Description} : Gestion spécialisée du contenu chargé dynamiquement sur Hespress via JavaScript
+    \item \textbf{Prérequis} : Selenium WebDriver avec support JavaScript
+    \item \textbf{Scénario principal} :
+    \begin{enumerate}
+        \item Selenium attend le chargement complet de la page
+        \item Il détecte les éléments de pagination des commentaires
+        \item Il simule le scrolling pour déclencher le lazy loading
+        \item Il attend le chargement des nouveaux commentaires
+        \item Il extrait tous les commentaires visibles
+        \item Il répète le processus jusqu'à épuisement du contenu
+    \end{enumerate}
+    \item \textbf{Critères d'acceptation} :
+    \begin{itemize}
+        \item Extraction complète des commentaires paginés
+        \item Gestion intelligente des timeouts et attentes
+        \item Adaptation aux changements de structure du site
+        \item Performance optimisée pour les pages à fort contenu
+    \end{itemize}
+\end{itemize}
+
+\textbf{CU-S2-05 : Accéder aux données via API REST}
+\begin{itemize}
+    \item \textbf{Acteur Principal} : Consommateur API
+    \item \textbf{Description} : Accès programmatique aux données collectées et prétraitées via l'API REST développée
+    \item \textbf{Prérequis} : API FastAPI déployée, authentification configurée
+    \item \textbf{Scénario principal} :
+    \begin{enumerate}
+        \item Le consommateur s'authentifie auprès de l'API
+        \item Il spécifie les critères de filtrage (date, article, qualité)
+        \item Il configure les paramètres de pagination
+        \item L'API retourne les données au format JSON structuré
+        \item Le consommateur traite les données reçues
+        \item Il peut demander des métadonnées supplémentaires si nécessaire
+    \end{enumerate}
+    \item \textbf{Critères d'acceptation} :
+    \begin{itemize}
+        \item Endpoints REST documentés et fonctionnels
+        \item Filtrage avancé et pagination efficaces
+        \item Format JSON structuré et cohérent
+        \item Gestion appropriée des erreurs et codes de statut
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Relations et Dépendances}
+
+Le diagramme de cas d'utilisation illustre les relations suivantes :
+
+\textbf{Relations d'inclusion (\texttt{<<include>>})} :
+\begin{itemize}
+    \item "Lancer la collecte automatisée" inclut "Extraire les commentaires d'Hespress"
+    \item "Extraire les commentaires" inclut "Gérer le contenu JavaScript dynamique"
+    \item "Prétraiter les données" inclut "Nettoyer et normaliser les textes"
+    \item "Nettoyer les textes" inclut "Détecter la langue des commentaires"
+    \item "Prétraiter les données" inclut "Supprimer les doublons avec Pandas"
+\end{itemize}
+
+\textbf{Relations d'extension (\texttt{<<extend>>})} :
+\begin{itemize}
+    \item "Gérer les erreurs et reprises automatiques" étend "Lancer la collecte automatisée"
+    \item "Optimiser les performances Selenium" étend "Configurer les paramètres de scraping"
+\end{itemize}
+
+\subsubsection{Flux de Données et Intégration}
+
+Le Sprint 2 établit un pipeline de données cohérent où :
+\begin{enumerate}
+    \item Selenium collecte les données brutes d'Hespress de manière automatisée
+    \item Pandas traite et nettoie ces données avec des algorithmes optimisés
+    \item L'API REST expose les données preprocessées aux consommateurs
+    \item Le système de monitoring supervise l'ensemble du processus
+\end{enumerate}
+
+Cette architecture modulaire prépare l'intégration avec le modèle cardiffnlp/twitter-xlm-roberta-base-sentiment prévu pour le Sprint 3, en garantissant une qualité de données optimale pour l'analyse de sentiment.

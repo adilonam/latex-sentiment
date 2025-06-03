@@ -1,0 +1,55 @@
+<mxfile host="65bd71144e">
+    <diagram name="Sprint2-Selenium-UseCase" id="sprint2-selenium-usecase">
+        <mxGraphModel dx="1110" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="system-boundary" value="Système de Web Scraping et Preprocessing - Sprint 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;fontSize=16;fontStyle=1;verticalAlign=top;spacingTop=20;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="80" width="700" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" style="edgeStyle=none;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="administrator" target="monitor-scraping">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" style="edgeStyle=none;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="administrator" target="schedule-collection">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" style="edgeStyle=none;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="administrator" target="configure-scraping">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" style="edgeStyle=none;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="administrator" target="optimize-performance">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="administrator" value="Administrateur&lt;br&gt;Système" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffcc99;strokeColor=#ff6600;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="414" width="60" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="api-consumer" value="Consommateur&lt;br&gt;API" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ccccff;strokeColor=#0000cc;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="140" width="60" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="configure-scraping" value="Configurer les&lt;br&gt;paramètres de&lt;br&gt;scraping Selenium" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="580" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="monitor-scraping" value="Surveiller le&lt;br&gt;processus de&lt;br&gt;scraping" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="294" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="schedule-collection" value="Planifier la&lt;br&gt;collecte&lt;br&gt;périodique" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="374" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="access-api" value="Accéder aux&lt;br&gt;données via&lt;br&gt;API REST" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="150" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="optimize-performance" value="Optimiser les&lt;br&gt;performances&lt;br&gt;Selenium" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="500" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="api-access" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="api-consumer" target="access-api" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="title" value="Diagramme de Cas d&#39;Utilisation - Sprint 2&lt;br&gt;Web Scraping Selenium et Preprocessing des Données" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#01579b;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="20" width="500" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -192,22 +192,11 @@ Ce diagramme illustre les interactions principales entre les acteurs (administra
 
 L'architecture objet du sprint 1 met en évidence les classes principales : UserController, AuthService, GatewayConfig, et DatabaseConfig. Ces classes forment le cœur de l'infrastructure de base et du système d'authentification.
 
-\subsection{Architecture de l'Environnement de Développement}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{assets/images/architecture.png}
-\caption{Architecture de l'environnement de développement}
-\label{fig:dev-architecture}
-\end{figure}
-
-L'architecture de l'environnement de développement illustre l'intégration entre Next.js (front-end), Spring Gateway (API Gateway), FastAPI (back-end), PostgreSQL (base de données), Redis (cache), et Keycloak (authentification). Cette architecture microservices garantit la séparation des responsabilités et la scalabilité du système.
-
 \subsection{Diagramme de Séquence de l'Authentification}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{assets/images/keycloak-seq.png}
+\includegraphics[width=0.9\textwidth]{assets/images/auth-sequence.png}
 \caption{Diagramme de séquence du processus d'authentification}
 \label{fig:auth-sequence}
 \end{figure}
