@@ -1,0 +1,79 @@
+<mxfile host="65bd71144e">
+    <diagram name="New Diagram" id="new-diagram">
+        <mxGraphModel dx="797" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="users" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;glass=0;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="500" width="250" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="id: UUID [PK]&#xa;email: VARCHAR(255) [UNIQUE]&#xa;first_name: VARCHAR(100)&#xa;last_name: VARCHAR(100)&#xa;role: user_role_enum&#xa;is_active: BOOLEAN&#xa;keycloak_id: VARCHAR(255) [UNIQUE]&#xa;created_at: TIMESTAMP&#xa;updated_at: TIMESTAMP&#xa;last_login: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
+                    <mxGeometry y="30" width="250" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="articles" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="770" y="100" width="250" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="id: UUID [PK]&#xa;user_id: UUID [FK]&#xa;title: VARCHAR(500)&#xa;url: VARCHAR(500) [UNIQUE]&#xa;category: VARCHAR(100)&#xa;publish_date: TIMESTAMP&#xa;author: VARCHAR(255)&#xa;scraped_at: TIMESTAMP&#xa;total_comments: INTEGER&#xa;content: TEXT&#xa;tags: VARCHAR[]&#xa;sentiment_summary: JSONB&#xa;created_at: TIMESTAMP&#xa;updated_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="4">
+                    <mxGeometry y="30" width="250" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="comments" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="80" width="280" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="id: UUID [PK]&#xa;content: TEXT&#xa;author: VARCHAR(255)&#xa;url: VARCHAR(500)&#xa;article_id: UUID [FK]&#xa;publish_date: TIMESTAMP&#xa;scraped_at: TIMESTAMP&#xa;raw_html: TEXT&#xa;cleaned_content: TEXT&#xa;is_processed: BOOLEAN&#xa;preprocessing_status: VARCHAR(50)&#xa;language: VARCHAR(10)&#xa;sentiment: sentiment_enum&#xa;confidence_score: DECIMAL(5,4)&#xa;created_at: TIMESTAMP&#xa;updated_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="6">
+                    <mxGeometry y="30" width="280" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="sentiment_analysis_results" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="30" width="280" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="id: UUID [PK]&#xa;comment_id: UUID [FK]&#xa;model_name: VARCHAR(255)&#xa;sentiment: sentiment_enum&#xa;confidence_score: DECIMAL(5,4)&#xa;positive_score: DECIMAL(5,4)&#xa;negative_score: DECIMAL(5,4)&#xa;neutral_score: DECIMAL(5,4)&#xa;processing_time: INTEGER&#xa;model_version: VARCHAR(50)&#xa;processed_at: TIMESTAMP&#xa;created_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="8">
+                    <mxGeometry y="30" width="280" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="dashboard_configurations" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#d0e1f2;strokeColor=#4a90e2;" vertex="1" parent="1">
+                    <mxGeometry x="1100" y="100" width="280" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="id: UUID [PK]&#xa;user_id: UUID [FK]&#xa;dashboard_name: VARCHAR(255)&#xa;layout_config: JSONB&#xa;chart_preferences: JSONB&#xa;filter_settings: JSONB&#xa;refresh_interval: INTEGER&#xa;is_default: BOOLEAN&#xa;created_at: TIMESTAMP&#xa;updated_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="10">
+                    <mxGeometry y="30" width="280" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="analysis_tasks" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#e6f3ff;strokeColor=#0066cc;" vertex="1" parent="1">
+                    <mxGeometry x="1100" y="350" width="280" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="id: UUID [PK]&#xa;user_id: UUID [FK]&#xa;task_type: analysis_task_enum&#xa;status: task_status_enum&#xa;priority: INTEGER&#xa;input_data: JSONB&#xa;result_data: JSONB&#xa;progress_percentage: DECIMAL(5,2)&#xa;error_message: TEXT&#xa;started_at: TIMESTAMP&#xa;completed_at: TIMESTAMP&#xa;created_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="12">
+                    <mxGeometry y="30" width="280" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="scraping_jobs" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="820" y="450" width="250" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="id: UUID [PK]&#xa;user_id: UUID [FK]&#xa;status: job_status_enum&#xa;start_time: TIMESTAMP&#xa;end_time: TIMESTAMP&#xa;target_url: VARCHAR(500)&#xa;pages_scraped: INTEGER&#xa;comments_found: INTEGER&#xa;articles_found: INTEGER&#xa;errors: TEXT&#xa;selenium_config: JSONB&#xa;retry_count: INTEGER&#xa;max_retries: INTEGER&#xa;progress_percentage: DECIMAL(5,2)&#xa;created_at: TIMESTAMP&#xa;updated_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="14">
+                    <mxGeometry y="30" width="250" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="reports" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="800" width="250" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="id: UUID [PK]&#xa;user_id: UUID [FK]&#xa;title: VARCHAR(255)&#xa;type: report_type_enum&#xa;date_from: DATE&#xa;date_to: DATE&#xa;file_path: VARCHAR(500)&#xa;status: report_status_enum&#xa;generated_at: TIMESTAMP&#xa;created_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="16">
+                    <mxGeometry y="30" width="250" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="cache_entries" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="840" width="250" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="id: UUID [PK]&#xa;user_id: UUID [FK]&#xa;cache_key: VARCHAR(255) [UNIQUE]&#xa;cache_value: TEXT&#xa;expires_at: TIMESTAMP&#xa;tags: VARCHAR[]&#xa;created_at: TIMESTAMP&#xa;updated_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="18">
+                    <mxGeometry y="30" width="250" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="model_configurations" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#ffebee;strokeColor=#e91e63;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="620" width="280" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="id: UUID [PK]&#xa;model_name: VARCHAR(255) [UNIQUE]&#xa;model_version: VARCHAR(50)&#xa;model_path: VARCHAR(500)&#xa;parameters: JSONB&#xa;performance_metrics: JSONB&#xa;is_active: BOOLEAN&#xa;last_used: TIMESTAMP&#xa;created_at: TIMESTAMP&#xa;updated_at: TIMESTAMP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="20">
+                    <mxGeometry y="30" width="280" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="SPRINT 3 ENUMS" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=tableLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=2;fillColor=#f0f0f0;strokeColor=#666666;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="320" width="300" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="sentiment_enum:&#xa;  - POSITIVE&#xa;  - NEGATIVE&#xa;  - NEUTRAL&#xa;&#xa;analysis_task_enum:&#xa;  - SENTIMENT_ANALYSIS&#xa;  - BATCH_PROCESSING&#xa;  - MODEL_TRAINING&#xa;  - DATA_EXPORT&#xa;  - TREND_ANALYSIS&#xa;&#xa;task_status_enum:&#xa;  - QUEUED&#xa;  - PROCESSING&#xa;  - COMPLETED&#xa;  - FAILED&#xa;  - RETRYING&#xa;  - CANCELLED&#xa;&#xa;chart_type_enum:&#xa;  - LINE_CHART&#xa;  - BAR_CHART&#xa;  - PIE_CHART&#xa;  - HEATMAP&#xa;  - SCATTER_PLOT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="22">
+                    <mxGeometry y="30" width="300" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="SPRINT 3 FOCUS:&#xa;&#xa;Integration du modele cardiffnlp/twitter-xlm-roberta-base-sentiment&#xa;Analyse de sentiment en temps reel&#xa;Tableau de bord de visualisation interactif&#xa;Configuration personnalisable des dashboards&#xa;Taches d analyse asynchrones&#xa;Metriques de performance du modele&#xa;Cache intelligent des resultats&#xa;API de statistiques et tendances" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#e1f5fe;strokeColor=#0288d1;fontStyle=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;" vertex="1" parent="1">
+                    <mxGeometry x="1100" y="620" width="280" height="180" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
