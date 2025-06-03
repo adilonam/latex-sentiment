@@ -159,24 +159,26 @@ Le sprint 3 a abouti à l'intégration réussie du modèle d'intelligence artifi
 
 L'intégration du modèle cardiffnlp/twitter-xlm-roberta-base-sentiment dans l'API FastAPI a été réalisée avec succès. Le modèle, optimisé pour l'analyse de sentiments sur les réseaux sociaux et adapté aux textes multilingues, offre une précision remarquable pour les commentaires en français et arabe collectés sur Hespress. L'implémentation inclut un système de mise en cache intelligent avec Redis pour optimiser les performances.
 
-\subsection{Pipeline de Classification Automatique}
+\subsection{Interface Utilisateur Initiale}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{assets/images/admin-doc.png}
-\caption{Pipeline automatique de classification des sentiments}
-\label{fig:classification-pipeline}
+\includegraphics[width=0.9\textwidth]{assets/images/init-ui.png}
+\caption{Interface utilisateur initiale de l'application d'analyse de sentiments}
+\label{fig:initial-ui}
 \end{figure}
 
-Le pipeline de classification développé permet le traitement automatique des commentaires collectés par le scraper Selenium. Ce système traite les données en lot, applique le preprocessing nécessaire (nettoyage, tokenisation), exécute les prédictions via le modèle Hugging Face, et stocke les résultats enrichis dans PostgreSQL. Les performances ont été optimisées pour traiter plusieurs milliers de commentaires par heure.
+L'interface utilisateur initiale développée avec Next.js constitue le point d'entrée principal de l'application d'analyse de sentiments. Cette interface présente une conception moderne et épurée qui permet aux utilisateurs d'accéder facilement aux fonctionnalités de base du système. L'écran d'accueil affiche une vue d'ensemble des statistiques de sentiments en temps réel, avec des composants visuels intuitifs pour naviguer entre les différentes sections de l'application.
+
+L'interface initiale intègre les éléments essentiels suivants : un panneau de statistiques rapides affichant la distribution des sentiments (positif, négatif, neutre), un système de navigation claire vers les modules d'analyse, de configuration et de rapports, ainsi qu'un indicateur de statut du système montrant l'état de fonctionnement des différents composants (scraper Selenium, modèle d'IA, base de données). Cette approche permet aux utilisateurs de rapidement comprendre l'état global de l'analyse des commentaires Hespress.
 
 \subsection{Tableau de Bord de Visualisation Initial}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\textwidth]{assets/images/admin-add-certif.png}
+\includegraphics[width=0.9\textwidth]{assets/images/report-ui.png}
 \caption{Interface initiale du tableau de bord d'analyse de sentiments}
-\label{fig:initial-dashboard}
+\label{fig:report-ui}
 \end{figure}
 
 Le tableau de bord développé avec Next.js offre une première visualisation des résultats d'analyse de sentiments. L'interface présente des graphiques de distribution (positif, négatif, neutre), des tendances temporelles, et des filtres par article ou période. L'architecture modulaire facilite l'ajout de nouvelles fonctionnalités de visualisation dans les sprints futurs.
@@ -219,13 +221,7 @@ Le système de classification implémenté présente les caractéristiques suiva
 
 \subsection{Interface de Monitoring et Administration}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{assets/images/calendar.png}
-\caption{Interface de monitoring des performances du modèle d'IA}
-\label{fig:model-monitoring}
-\end{figure}
-
+\textcolor{red}{[TODO: Ajouter l'image de l'interface d'administration ici]}
 Une interface dédiée permet aux administrateurs de surveiller les performances du modèle en temps réel, d'ajuster les paramètres de classification, et de planifier la maintenance préventive du système. Cette interface affiche les métriques de latence, précision et charge du système.
 
 \subsection{Validation et Tests du Modèle}
