@@ -1,0 +1,195 @@
+<mxfile host="65bd71144e">
+    <diagram name="Sprint3-AI-Dashboard-UseCase" id="sprint3-ai-dashboard-usecase">
+        <mxGraphModel dx="754" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="system-boundary" value="Système d'Analyse de Sentiment et Tableau de Bord - Sprint 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;fontSize=16;fontStyle=1;verticalAlign=top;spacingTop=20;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="80" width="700" height="650" as="geometry"/>
+                </mxCell>
+                
+                <!-- Acteurs -->
+                <mxCell id="user-actor" value="Utilisateur" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="200" width="60" height="100" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="admin-actor" value="Administrateur" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="500" width="60" height="100" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="ml-engineer" value="Ingénieur ML" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="350" width="60" height="100" as="geometry"/>
+                </mxCell>
+                
+                <!-- Cas d'utilisation Utilisateur -->
+                <mxCell id="authenticate" value="S'authentifier&lt;br&gt;via Keycloak" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="120" width="140" height="70" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="view-dashboard" value="Consulter le&lt;br&gt;tableau de bord&lt;br&gt;d'analyse" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="150" width="140" height="80" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="analyze-sentiment" value="Lancer l'analyse&lt;br&gt;de sentiment&lt;br&gt;automatique" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="200" width="140" height="80" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="view-statistics" value="Visualiser les&lt;br&gt;statistiques de&lt;br&gt;sentiments" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="250" width="140" height="80" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="view-charts" value="Consulter les&lt;br&gt;graphiques de&lt;br&gt;tendances" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="310" width="140" height="80" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="filter-results" value="Filtrer les&lt;br&gt;résultats&lt;br&gt;d'analyse" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="250" width="140" height="80" as="geometry"/>
+                </mxCell>
+                
+                <!-- Cas d'utilisation Ingénieur ML -->
+                <mxCell id="configure-model" value="Configurer le&lt;br&gt;modèle XLM-RoBERTa&lt;br&gt;sentiment" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="390" width="140" height="80" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="test-model" value="Tester les&lt;br&gt;performances&lt;br&gt;du modèle" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="430" width="140" height="80" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="optimize-pipeline" value="Optimiser le&lt;br&gt;pipeline de&lt;br&gt;classification" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="490" width="140" height="80" as="geometry"/>
+                </mxCell>
+                
+                <!-- Cas d'utilisation Administrateur -->
+                <mxCell id="monitor-api" value="Surveiller l'API&lt;br&gt;FastAPI d'analyse" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="550" width="140" height="80" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="manage-cache" value="Gérer le cache&lt;br&gt;Redis des&lt;br&gt;résultats" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="590" width="140" height="80" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="configure-gateway" value="Configurer&lt;br&gt;Spring Gateway&lt;br&gt;pour l'IA" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="530" width="140" height="80" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="manage-db-results" value="Gérer le stockage&lt;br&gt;des résultats&lt;br&gt;PostgreSQL" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="640" width="140" height="80" as="geometry"/>
+                </mxCell>
+                
+                <!-- Relations Utilisateur -->
+                <mxCell id="2" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="view-dashboard" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="3" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="analyze-sentiment" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="4" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="view-statistics" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="5" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="view-charts" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="6" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="user-actor" target="filter-results" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <!-- Relations Ingénieur ML -->
+                <mxCell id="7" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="ml-engineer" target="configure-model" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="8" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="ml-engineer" target="test-model" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="9" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="ml-engineer" target="optimize-pipeline" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <!-- Relations Administrateur -->
+                <mxCell id="10" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="monitor-api" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="11" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="manage-cache" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="12" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="configure-gateway" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="13" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="admin-actor" target="manage-db-results" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="400" as="sourcePoint"/>
+                        <mxPoint x="450" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <!-- Relations include avec authentification -->
+                <mxCell id="14" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;" parent="1" source="view-dashboard" target="authenticate" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="15" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;" parent="1" source="analyze-sentiment" target="authenticate" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="16" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;" parent="1" source="view-statistics" target="authenticate" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                
+                <!-- Relations extend -->
+                <mxCell id="17" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;" parent="1" source="filter-results" target="view-statistics" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="18" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;" parent="1" source="view-charts" target="view-dashboard" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                
+                <!-- Titre -->
+                <mxCell id="title" value="Diagramme de Cas d'Utilisation - Sprint 3&lt;br&gt;Intégration du Modèle d'IA et Développement du Tableau de Bord" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#2e7d32;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="10" width="600" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
