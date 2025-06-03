@@ -1,0 +1,274 @@
+<mxfile host="65bd71144e">
+    <diagram name="Sequence Diagram - Sprint 3 - Sentiment Analysis &amp; Dashboard" id="sprint3-sequence-diagram">
+        <mxGraphModel dx="1422" dy="772" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                
+                <mxCell id="Title" value="Diagramme de Séquence - Sprint 3&#xa;Intégration du Modèle d'Analyse de Sentiment et Tableau de Bord" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="400" y="20" width="800" height="40" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="User" value="Utilisateur&#xa;Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="100" width="30" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="NextJS" value="Next.js&#xa;Frontend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="100" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Gateway" value="Spring&#xa;API Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="100" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="FastAPI" value="FastAPI&#xa;Backend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="100" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="HuggingFace" value="Cardiff NLP&#xa;Sentiment Model" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6f3ff;strokeColor=#4d9ddb;" vertex="1" parent="1">
+                    <mxGeometry x="600" y="100" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Redis" value="Redis&#xa;Cache" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="100" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="PostgreSQL" value="PostgreSQL&#xa;Database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+                    <mxGeometry x="880" y="100" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Analytics" value="Analytics&#xa;Engine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="1020" y="100" width="80" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="UserLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="95" y="180" as="sourcePoint"/>
+                        <mxPoint x="95" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="NextJSLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="180" as="sourcePoint"/>
+                        <mxPoint x="220" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="GatewayLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="180" as="sourcePoint"/>
+                        <mxPoint x="360" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="FastAPILifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="180" as="sourcePoint"/>
+                        <mxPoint x="500" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="HuggingFaceLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="640" y="180" as="sourcePoint"/>
+                        <mxPoint x="640" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="RedisLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="780" y="180" as="sourcePoint"/>
+                        <mxPoint x="780" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="PostgreSQLLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="920" y="180" as="sourcePoint"/>
+                        <mxPoint x="920" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="AnalyticsLifeline" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1060" y="180" as="sourcePoint"/>
+                        <mxPoint x="1060" y="1100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Phase1" value="Phase 1: Chargement et Initialisation du Modèle ML" style="text;html=1;strokeColor=none;fillColor=#e6f3ff;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="200" width="400" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Arrow1" value="1: Load Cardiff NLP Model" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="250" as="sourcePoint"/>
+                        <mxPoint x="640" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow2" value="2: Initialize Tokenizer" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="280" as="sourcePoint"/>
+                        <mxPoint x="640" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow3" value="3: Model Ready" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;dashed=1;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="640" y="310" as="sourcePoint"/>
+                        <mxPoint x="500" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Phase2" value="Phase 2: Processus d'Analyse de Sentiment" style="text;html=1;strokeColor=none;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="350" width="400" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Arrow4" value="4: Request Dashboard Access" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="95" y="400" as="sourcePoint"/>
+                        <mxPoint x="220" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow5" value="5: Get Comments for Analysis" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="430" as="sourcePoint"/>
+                        <mxPoint x="360" y="430" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow6" value="6: Route to FastAPI" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="460" as="sourcePoint"/>
+                        <mxPoint x="500" y="460" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow7" value="7: Check Cache for Results" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="490" as="sourcePoint"/>
+                        <mxPoint x="780" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow8" value="8: Cache Miss" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;dashed=1;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="780" y="520" as="sourcePoint"/>
+                        <mxPoint x="500" y="520" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow9" value="9: Fetch Raw Comments" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="550" as="sourcePoint"/>
+                        <mxPoint x="920" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow10" value="10: Return Comments Data" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;dashed=1;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="920" y="580" as="sourcePoint"/>
+                        <mxPoint x="500" y="580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow11" value="11: Preprocess Text (Clean, Tokenize)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="610" as="sourcePoint"/>
+                        <mxPoint x="640" y="610" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow12" value="12: Analyze Sentiment (Batch)" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="640" as="sourcePoint"/>
+                        <mxPoint x="640" y="640" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow13" value="13: Return Sentiment Scores" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;dashed=1;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="640" y="670" as="sourcePoint"/>
+                        <mxPoint x="500" y="670" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow14" value="14: Store Results in Cache" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="700" as="sourcePoint"/>
+                        <mxPoint x="780" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow15" value="15: Update Database with Sentiment" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="730" as="sourcePoint"/>
+                        <mxPoint x="920" y="730" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Phase3" value="Phase 3: Génération du Tableau de Bord et Visualisations" style="text;html=1;strokeColor=none;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="770" width="450" height="30" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Arrow16" value="16: Generate Analytics" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="820" as="sourcePoint"/>
+                        <mxPoint x="1060" y="820" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow17" value="17: Calculate Statistics" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1060" y="850" as="sourcePoint"/>
+                        <mxPoint x="920" y="850" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow18" value="18: Return Dashboard Data" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;dashed=1;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1060" y="880" as="sourcePoint"/>
+                        <mxPoint x="500" y="880" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow19" value="19: Send Analytics to Gateway" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;dashed=1;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="910" as="sourcePoint"/>
+                        <mxPoint x="360" y="910" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow20" value="20: Return to Frontend" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;dashed=1;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="940" as="sourcePoint"/>
+                        <mxPoint x="220" y="940" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Arrow21" value="21: Display Dashboard" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeWidth=2;dashed=1;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="970" as="sourcePoint"/>
+                        <mxPoint x="95" y="970" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                
+                <mxCell id="Note1" value="Note: Le modèle Cardiff NLP est optimisé&#xa;pour l'analyse de sentiment multilingue&#xa;incluant l'arabe et le français" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="320" width="200" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Note2" value="Note: Le cache Redis stocke les résultats&#xa;d'analyse pour éviter le retraitement&#xa;des commentaires déjà analysés" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="530" width="200" height="60" as="geometry"/>
+                </mxCell>
+                
+                <mxCell id="Note3" value="Note: L'Analytics Engine génère&#xa;des statistiques en temps réel:&#xa;- Distribution des sentiments&#xa;- Tendances temporelles&#xa;- Métriques de performance" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=10;" vertex="1" parent="1">
+                    <mxGeometry x="1070" y="760" width="200" height="80" as="geometry"/>
+                </mxCell>
+                
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
