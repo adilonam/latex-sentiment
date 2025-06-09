@@ -128,94 +128,321 @@ Le centre maintient des relations etroites avec l'ecosysteme economique local et
 
 \section{Presentation du projet :}
 
-\subsection{Problematique et presentation du projet}
+\subsection{Contexte général}
 
-Avec l'essor des medias numeriques et des plateformes d'actualites en ligne au Maroc, l'analyse des sentiments exprimés par les utilisateurs dans les commentaires devient cruciale pour comprendre l'opinion publique. Hespress, l'un des sites d'actualites les plus populaires au Maroc, reçoit quotidiennement des milliers de commentaires sur ses articles, representant une source riche d'informations sur les sentiments et opinions des citoyens marocains.
+À l'ère du numérique, les réseaux sociaux sont devenus des espaces privilégiés d'expression pour les étudiants universitaires. L'Université Ibn Zohr d'Agadir, l'une des institutions d'enseignement supérieur les plus prestigieuses du Maroc, compte des milliers d'étudiants qui s'expriment quotidiennement sur diverses plateformes numériques. Ces expressions spontanées constituent une mine d'informations précieuses sur le ressenti, les préoccupations et les opinions des étudiants concernant leur expérience universitaire.
 
-Face à ce volume important de donnees textuelles, il devient necessaire de developper un systeme automatise capable d'analyser et de classer les sentiments exprimés dans ces commentaires de manière efficace et precise.
+\subsection{Problématique}
 
-\subsection{Contexte de l'analyse de sentiments}
-
-Le contexte actuel des medias numeriques est marque par une participation active des citoyens qui expriment leurs opinions à travers les commentaires. Cette interaction massive genere une quantite considerable de donnees non structurees qui necessitent des outils d'analyse avancés pour en extraire des informations pertinentes.
-
-\subsection{Besoin d'une analyse automatisee}
-
-À l'ere du big data, où les volumes de donnees textuelles croissent exponentiellement, les organisations et les chercheurs ont besoin d'outils capables d'analyser automatiquement les sentiments exprimés dans les textes. Un systeme d'analyse de sentiments s'avere indispensable pour traiter efficacement ces grandes quantites de donnees et en extraire des insights significatifs.
-
-\section{Solution Proposee}
-
-L'application d'analyse de sentiments represente une solution innovative pour traiter et analyser les commentaires d'Hespress. Capable de collecter, traiter et classer automatiquement les sentiments exprimés, elle offre une analyse en temps reel des opinions publiques.
-
-\subsection{Architecture de l'application}
-
-L'application sera developpee avec une architecture moderne et scalable utilisant les technologies suivantes :
+L'analyse manuelle de ces volumes massifs de données textuelles générées par les étudiants sur les réseaux sociaux s'avère impraticable et chronophage. Face à cette réalité, il devient crucial de développer des outils automatisés capables de détecter, analyser et classifier les sentiments exprimés par les étudiants. Cette problématique soulève plusieurs questions fondamentales :
 
 \begin{itemize}
-    \item \textbf{Frontend} : Next.js pour une interface utilisateur moderne et reactive
-    \item \textbf{Backend} : FastAPI pour une API rapide et performante
-    \item \textbf{Authentification} : Keycloak pour la gestion securisee des utilisateurs
-    \item \textbf{Web Scraping} : Selenium pour la collecte automatisee des commentaires
-    \item \textbf{Analyse de sentiments} : Modele cardiffnlp/twitter-xlm-roberta-base-sentiment pour la classification des textes
-    \item \textbf{API Gateway} : Spring pour la gestion et la securisation des APIs
+    \item Comment peut-on comprendre automatiquement les émotions et opinions des étudiants exprimées dans leurs publications sur les réseaux sociaux ?
+    \item Quels sont les défis techniques liés au traitement du langage naturel dans le contexte marocain multilingue ?
+    \item Comment l'intelligence artificielle peut-elle contribuer à améliorer la compréhension des besoins et préoccupations estudiantines ?
 \end{itemize}
 
-\subsection{Methodes d'analyse de sentiments}
+\subsection{Objectifs de l'étude}
 
-Pour l'analyse de sentiments, nous utilisons le modele pre-entraine \textbf{cardiffnlp/twitter-xlm-roberta-base-sentiment}, specifiquement optimise pour l'analyse de sentiments sur des textes courts et informels, similaires aux commentaires sur les reseaux sociaux.
+Cette recherche vise à développer un système intelligent d'analyse des sentiments spécifiquement adapté au contexte universitaire marocain. Les objectifs principaux incluent :
 
-\subsubsection{Le modele XLM-RoBERTa}
+\begin{enumerate}
+    \item \textbf{Conception d'un système d'analyse automatisée} : Développer une solution technologique capable de traiter et analyser les contenus textuels des étudiants sur les réseaux sociaux
+    \item \textbf{Compréhension des sentiments estudiantins} : Identifier et classifier les émotions dominantes exprimées par les étudiants (joie, frustration, satisfaction, inquiétude, etc.)
+    \item \textbf{Adaptation au contexte multilingue} : Prendre en compte la diversité linguistique du Maroc (arabe, français, darija) dans l'analyse des sentiments
+    \item \textbf{Contribution à l'amélioration de l'expérience universitaire} : Fournir des insights exploitables pour l'amélioration des services et de l'environnement d'apprentissage
+\end{enumerate}
 
-XLM-RoBERTa est un modele de langage multilingue base sur l'architecture Transformer, pre-entraine sur des donnees textuelles dans plusieurs langues, incluant l'arabe et le français, ce qui le rend particulièrement adapte au contexte marocain.
+\subsection{Questions de recherche}
 
-\paragraph{Avantages du modele choisi :}
+Cette étude s'articule autour de plusieurs questions de recherche fondamentales :
+
 \begin{itemize}
-    \item \textbf{Support multilingue} : Capable de traiter les textes en arabe, français et darija marocaine
-    \item \textbf{Optimisation pour les reseaux sociaux} : Entraine specifiquement sur des donnees de Twitter
-    \item \textbf{Precision elevee} : Performance demontree sur les taches de classification de sentiments
-    \item \textbf{Facilite d'integration} : Disponible via la librairie Transformers de Hugging Face
+    \item \textbf{Question principale} : Comment l'intelligence artificielle peut-elle être utilisée efficacement pour analyser les sentiments des étudiants de l'Université Ibn Zohr exprimés sur les réseaux sociaux ?
+    \item \textbf{Questions secondaires} :
+    \begin{itemize}
+        \item Quelles sont les méthodes de traitement automatique du langage naturel les plus adaptées au contexte marocain ?
+        \item Comment gérer la complexité linguistique et culturelle dans l'analyse des sentiments ?
+        \item Quels modèles d'intelligence artificielle offrent les meilleures performances pour cette tâche spécifique ?
+        \item Comment intégrer efficacement les différentes modalités d'expression (texte, émojis, images) ?
+    \end{itemize}
 \end{itemize}
 
-\paragraph{Processus d'analyse :}
+\subsection{Méthodologie de recherche}
+
+Notre approche méthodologique s'appuie sur une démarche scientifique rigoureuse combinant recherche théorique et développement pratique :
+
+\begin{enumerate}
+    \item \textbf{Revue de littérature approfondie} : Analyse critique des travaux existants en analyse de sentiments, avec un focus particulier sur les défis du sarcasme, des émojis et de la multimodalité
+    \item \textbf{Collecte et préparation des données} : Constitution d'un corpus représentatif de publications d'étudiants sur les réseaux sociaux
+    \item \textbf{Développement du système} : Conception et implémentation d'une architecture technique innovante
+    \item \textbf{Évaluation et validation} : Tests de performance et validation des résultats obtenus
+    \item \textbf{Analyse et interprétation} : Exploitation des résultats pour générer des insights exploitables
+\end{enumerate}
+
+\subsection{Cadre de recherche : Fondements théoriques de l'analyse de sentiment}
+
+\subsubsection{Qu'est-ce que le « sentiment » ?}
+
+En psychologie, le sentiment désigne un état affectif durable et d'une intensité modérée, souvent dirigé vers un objet ou une situation donnée. Il se distingue des réactions émotionnelles brèves par sa stabilité temporelle et sa composante cognitive.
+
+Classiquement, William James (1884) fut l'un des premiers à analyser scientifiquement les émotions : il proposa que les changements corporels (rythme cardiaque, tensions musculaires, etc.) précèdent et produisent le ressenti émotionnel. Autrement dit, pour James, sans ces manifestations physiologiques, l'« émotion » ne serait qu'une perception intellectuelle froide de la situation.
+
+Plus tard, Paul Ekman (années 1970) identifia un ensemble d'émotions de base universelles, caractérisées par des expressions faciales distinctes. Ekman a notamment mis en évidence six émotions fondamentales – joie, tristesse, peur, colère, surprise et dégoût – supposées reconnues à travers toutes les cultures.
+
+\subsubsection{Typologie des sentiments}
+
+Du point de vue psychologique, les états affectifs se caractérisent notamment par leur valence émotionnelle, c'est-à-dire le fait d'être agréables ou désagréables (positifs vs négatifs). Cette dimension de valence est fondamentale : par exemple, la peur et la tristesse sont des affects négatifs, alors que la joie est positive.
+
+Dans le langage courant et en analyse de sentiment automatisée, on utilise souvent une typologie simplifiée en trois catégories :
+
 \begin{itemize}
-    \item Collecte automatisee des commentaires via Selenium
-    \item Preprocessing et nettoyage des textes
-    \item Tokenisation et preparation des donnees pour le modele
-    \item Classification des sentiments (positif, negatif, neutre)
-    \item Stockage et visualisation des resultats
+    \item \textbf{Sentiment positif} : reflète un jugement ou une émotion agréable (satisfaction, enthousiasme)
+    \item \textbf{Sentiment négatif} : traduit une évaluation défavorable ou une émotion pénible (mécontentement, colère)
+    \item \textbf{Sentiment neutre} : indique l'absence de position affective tranchée ou un état mitigé
 \end{itemize}
 
-\section{Tableau des fonctionnalites}
+\subsubsection{Distinction entre sentiment et émotion}
 
-Nous presentons ici un tableau decrivant les fonctionnalites offertes par l'application d'analyse de sentiments et leur impact sur l'analyse des donnees.
+Il est crucial de bien distinguer sentiment et émotion, deux termes souvent confondus :
 
-\begin{table}[H]
-\centering
-\begin{tabularx}{\textwidth}{|l|X|}
-\hline
-\textbf{Fonctionnalite} & \textbf{Description et Impact} \\
-\hline
-Collecte automatisee des commentaires & 
-L'application collecte automatiquement les commentaires d'Hespress en temps reel, permettant une analyse continue et actualisee des sentiments exprimés. \\
-\hline
-Classification des sentiments & 
-Analyse et classification automatique des sentiments (positif, negatif, neutre) avec une precision elevee grace au modele XLM-RoBERTa. \\
-\hline
-Tableau de bord analytique & 
-Interface intuitive pour visualiser les resultats d'analyse avec des graphiques et des statistiques en temps reel. \\
-\hline
-Gestion des utilisateurs & 
-Systeme d'authentification securise avec Keycloak permettant la gestion des droits d'accès et des profils utilisateurs. \\
-\hline
-API RESTful & 
-Interface de programmation robuste pour l'integration avec d'autres systemes et l'accès aux donnees d'analyse. \\
-\hline
-Historique et tendances & 
-Suivi des tendances de sentiments dans le temps avec possibilite d'analyse historique et de generation de rapports. \\
-\hline
-\end{tabularx}
-\caption{Recapitulatif des fonctionnalites de l'application d'analyse de sentiments}
-\label{tab:fonctionnalites}
-\end{table}
+\paragraph{L'émotion} est un épisode bref (de l'ordre de la seconde ou de la minute) accompagné de changements physiologiques marqués (expressions faciales, réactions neurovégétatives, etc.), survenant en réponse immédiate à un stimulus ou un événement spécifique.
+
+\paragraph{Le sentiment} se présente comme un état affectif plus durable qui peut persister des heures, des jours ou davantage. Il s'agit d'une disposition émotionnelle stable, résultant souvent de la maturation ou de la réinterprétation d'émotions passées.
+
+\subsubsection{L'analyse de sentiment dans le NLP}
+
+En Traitement Automatique du Langage Naturel (NLP), l'analyse de sentiment est définie comme le traitement informatique des opinions, évaluations et attitudes exprimées dans un texte. Plus formellement, Bing Liu propose la définition suivante : « L'analyse de sentiment, également appelée opinion mining, est le domaine d'étude qui analyse les opinions, sentiments, évaluations, appréciations, attitudes et émotions des personnes à l'égard d'entités données (produits, services, organisations, individus, événements, etc.) et de leurs attributs ».
+
+L'objectif final est de permettre à un programme de comprendre automatiquement le ressenti exprimé dans des masses de données textuelles non structurées, là où la lecture humaine serait fastidieuse ou impossible à grande échelle.
+
+\subsubsection{Pourquoi l'analyse de sentiment ?}
+
+Plusieurs enjeux majeurs expliquent l'essor de l'analyse de sentiment :
+
+\begin{itemize}
+    \item \textbf{Compréhension des opinions} : Les opinions des individus exercent une influence directe sur leurs comportements
+    \item \textbf{Traitement de volumes massifs} : À l'ère du numérique, une quantité sans précédent d'avis s'exprime publiquement sur Internet
+    \item \textbf{Prise de décision éclairée} : L'analyse automatique permet de synthétiser ces informations qualitatives pour dégager des tendances exploitables
+    \item \textbf{Prédiction comportementale} : Un indicateur agrégé du sentiment public peut être corrélé à des événements socio-économiques
+\end{itemize}
+
+\subsubsection{Applications de l'analyse de sentiment}
+
+L'analyse de sentiment trouve aujourd'hui des applications dans de nombreux domaines :
+
+\paragraph{Secteur éducatif :}
+\begin{itemize}
+    \item Évaluation de la satisfaction des étudiants concernant les cours et services universitaires
+    \item Analyse des commentaires sur les plateformes d'apprentissage en ligne
+    \item Détection précoce de situations de détresse psychologique chez les étudiants
+    \item Amélioration continue des méthodes pédagogiques basée sur les retours étudiants
+\end{itemize}
+
+\paragraph{Réseaux sociaux et communication :}
+\begin{itemize}
+    \item Surveillance de l'e-réputation des institutions
+    \item Analyse des tendances d'opinion sur des sujets d'actualité
+    \item Détection de phénomènes viraux ou de crises naissantes
+    \item Personnalisation des contenus et recommandations
+\end{itemize}
+
+\subsubsection{Fonctionnement de l'analyse de sentiment}
+
+L'analyse automatique de sentiment repose sur plusieurs approches complémentaires :
+
+\paragraph{Approches d'apprentissage automatique :}
+\begin{itemize}
+    \item \textbf{Support Vector Machines (SVM)} : Efficaces pour la classification de texte
+    \item \textbf{Naive Bayes} : Algorithme populaire pour l'analyse de sentiment
+    \item \textbf{Régression logistique} : Utilisée pour la reconnaissance émotionnelle textuelle
+\end{itemize}
+
+\paragraph{Approches d'apprentissage profond :}
+\begin{itemize}
+    \item \textbf{Réseaux de neurones convolutionnels (CNN)} : Pour l'évaluation de sentiment affinée
+    \item \textbf{Long Short-Term Memory (LSTM)} : Efficaces pour capturer les dépendances à long terme
+    \item \textbf{Modèles Transformer} : BERT, T5, et GPT pour des représentations contextuelles avancées
+\end{itemize}
+
+\paragraph{Défis spécifiques :}
+\begin{itemize}
+    \item \textbf{Détection du sarcasme} : Identifier les énoncés ironiques qui inversent le sentiment apparent
+    \item \textbf{Traitement des émojis} : Intégrer la dimension visuelle et émotionnelle des symboles
+    \item \textbf{Analyse multimodale} : Combiner texte, images et autres modalités pour une compréhension globale
+    \item \textbf{Multilinguisme} : Adapter les méthodes aux spécificités linguistiques locales
+\end{itemize}
+
+\section{Solution Proposée}
+
+Dans le cadre de notre projet de recherche, nous proposons de développer une application innovante de détection et d'analyse de sentiments spécifiquement conçue pour traiter les commentaires publiés sur Hespress, l'un des sites d'actualités les plus influents du Maroc. Cette solution technologique vise à automatiser l'analyse des opinions exprimées par les citoyens marocains dans leurs réactions aux articles d'actualité.
+
+\subsection{Vue d'ensemble de la solution}
+
+Notre application d'analyse de sentiments représente une solution complète et moderne qui combine les dernières avancées en intelligence artificielle avec une architecture logicielle robuste et scalable. Le système est conçu pour :
+
+\begin{itemize}
+    \item \textbf{Collecter automatiquement} les commentaires d'Hespress en temps réel
+    \item \textbf{Analyser et classifier} les sentiments exprimés (positif, négatif, neutre)
+    \item \textbf{Présenter les résultats} via une interface utilisateur intuitive et interactive
+    \item \textbf{Fournir des insights} exploitables pour comprendre l'opinion publique marocaine
+\end{itemize}
+
+\subsection{Architecture technique de la solution}
+
+L'architecture de notre application suit une approche microservices moderne, garantissant la scalabilité, la maintenabilité et la performance. Elle s'articule autour des composants suivants :
+
+\subsubsection{Couche de présentation - Frontend}
+
+\paragraph{Next.js Framework :}
+Pour le développement de l'interface utilisateur, nous avons choisi \textbf{Next.js}, un framework React de nouvelle génération offrant :
+
+\begin{itemize}
+    \item \textbf{Rendu hybride} : Support du Server-Side Rendering (SSR) et de la génération statique
+    \item \textbf{Performance optimisée} : Code splitting automatique et optimisation des images
+    \item \textbf{Expérience développeur} : Hot reloading et TypeScript intégré
+    \item \textbf{SEO-friendly} : Métadonnées dynamiques et pré-rendu des pages
+\end{itemize}
+
+\paragraph{Fonctionnalités de l'interface :}
+\begin{itemize}
+    \item Tableau de bord analytique avec visualisations en temps réel
+    \item Interface de configuration et de paramétrage
+    \item Système de rapports et d'exportation de données
+    \item Interface responsive adaptée aux appareils mobiles et desktop
+\end{itemize}
+
+\subsubsection{Couche logique métier - Backend}
+
+\paragraph{FastAPI Framework :}
+Le backend de l'application est développé avec \textbf{FastAPI}, un framework Python moderne caractérisé par :
+
+\begin{itemize}
+    \item \textbf{Performance élevée} : Basé sur Starlette et Pydantic, offrant des performances comparables à Node.js
+    \item \textbf{Documentation automatique} : Génération automatique de documentation OpenAPI/Swagger
+    \item \textbf{Validation des données} : Validation automatique des types avec Pydantic
+    \item \textbf{Support asynchrone} : Gestion native des opérations asynchrones
+\end{itemize}
+
+\paragraph{Services métier :}
+\begin{itemize}
+    \item Service d'analyse de sentiments intégrant le modèle IA
+    \item Service de gestion des utilisateurs et des permissions
+    \item Service de traitement et de stockage des données
+    \item Service de génération de rapports et de statistiques
+\end{itemize}
+
+\subsubsection{Système d'authentification et d'autorisation}
+
+\paragraph{Keycloak Identity Provider :}
+Pour sécuriser l'application, nous utilisons \textbf{Keycloak}, une solution d'identité et d'accès open-source offrant :
+
+\begin{itemize}
+    \item \textbf{Single Sign-On (SSO)} : Authentification unique pour tous les services
+    \item \textbf{Gestion des rôles} : Système de permissions granulaire
+    \item \textbf{Protocoles standards} : Support OAuth 2.0, OpenID Connect, SAML 2.0
+    \item \textbf{Fédération d'identité} : Intégration avec des providers externes (Google, Facebook, etc.)
+\end{itemize}
+
+\subsubsection{Collecte de données - Web Scraping}
+
+\paragraph{Selenium WebDriver :}
+Pour la collecte automatisée des commentaires d'Hespress, nous employons \textbf{Selenium}, un outil de web scraping offrant :
+
+\begin{itemize}
+    \item \textbf{Automation complète} : Simulation d'interactions utilisateur réelles
+    \item \textbf{Support multi-navigateurs} : Compatible Chrome, Firefox, Safari, Edge
+    \item \textbf{Gestion JavaScript} : Exécution de code JavaScript côté client
+    \item \textbf{Collecte robuste} : Gestion des éléments dynamiques et des délais de chargement
+\end{itemize}
+
+\paragraph{Processus de collecte :}
+\begin{enumerate}
+    \item Navigation automatique vers les articles d'Hespress
+    \item Extraction des commentaires et métadonnées associées
+    \item Nettoyage et normalisation des données textuelles
+    \item Stockage structuré dans la base de données
+\end{enumerate}
+
+\subsubsection{Modèle d'intelligence artificielle}
+
+\paragraph{cardiffnlp/twitter-xlm-roberta-base-sentiment :}
+Le cœur de notre système d'analyse repose sur le modèle pré-entraîné \textbf{cardiffnlp/twitter-xlm-roberta-base-sentiment}, spécifiquement optimisé pour :
+
+\begin{itemize}
+    \item \textbf{Analyse multilingue} : Support natif de l'arabe, du français et d'autres langues
+    \item \textbf{Textes courts informels} : Entraîné sur des données de réseaux sociaux (Twitter)
+    \item \textbf{Performance éprouvée} : Résultats de pointe sur les benchmarks d'analyse de sentiment
+    \item \textbf{Facilité d'intégration} : Compatible avec la bibliothèque Hugging Face Transformers
+\end{itemize}
+
+\paragraph{Caractéristiques techniques du modèle :}
+\begin{itemize}
+    \item \textbf{Architecture} : XLM-RoBERTa (Cross-lingual Language Model)
+    \item \textbf{Taille} : Base model avec 125M de paramètres
+    \item \textbf{Classes de sortie} : Positif, Négatif, Neutre avec scores de confiance
+    \item \textbf{Contexte} : Traitement de séquences jusqu'à 512 tokens
+\end{itemize}
+
+\subsubsection{Couche de stockage}
+
+\paragraph{PostgreSQL Database :}
+Pour le stockage principal des données, nous utilisons \textbf{PostgreSQL}, une base de données relationnelle avancée offrant :
+
+\begin{itemize}
+    \item \textbf{Robustesse} : Conformité ACID et haute disponibilité
+    \item \textbf{Performance} : Optimisations avancées pour les requêtes complexes
+    \item \textbf{Extensibilité} : Support JSON/JSONB pour données semi-structurées
+    \item \textbf{Sécurité} : Chiffrement et contrôle d'accès granulaire
+\end{itemize}
+
+\paragraph{Redis Cache :}
+Pour optimiser les performances, nous intégrons \textbf{Redis} comme système de cache :
+
+\begin{itemize}
+    \item \textbf{Cache haute performance} : Stockage en mémoire pour accès ultra-rapide
+    \item \textbf{Session management} : Gestion des sessions utilisateur
+    \item \textbf{Cache des résultats} : Mise en cache des analyses de sentiment fréquentes
+    \item \textbf{Pub/Sub messaging} : Communication temps réel entre services
+\end{itemize}
+
+\subsubsection{API Gateway et orchestration}
+
+\paragraph{Spring Cloud Gateway :}
+L'orchestration des microservices est assurée par \textbf{Spring Cloud Gateway}, offrant :
+
+\begin{itemize}
+    \item \textbf{Routage intelligent} : Distribution des requêtes vers les services appropriés
+    \item \textbf{Load balancing} : Répartition de charge automatique
+    \item \textbf{Sécurité centralisée} : Application uniforme des politiques de sécurité
+    \item \textbf{Monitoring} : Surveillance et métriques des performances
+\end{itemize}
+
+\subsection{Workflow de traitement des données}
+
+Le processus d'analyse de sentiment suit un pipeline optimisé :
+
+\begin{enumerate}
+    \item \textbf{Collecte} : Selenium extrait les commentaires d'Hespress
+    \item \textbf{Préprocessing} : Nettoyage, normalisation et tokenisation du texte
+    \item \textbf{Analyse} : Le modèle XLM-RoBERTa classifie les sentiments
+    \item \textbf{Post-processing} : Agrégation et calcul de statistiques
+    \item \textbf{Stockage} : Sauvegarde des résultats dans PostgreSQL
+    \item \textbf{Visualisation} : Présentation via l'interface Next.js
+\end{enumerate}
+
+\subsection{Avantages de la solution proposée}
+
+Notre solution présente plusieurs avantages concurrentiels :
+
+\begin{itemize}
+    \item \textbf{Scalabilité} : Architecture microservices adaptée à la croissance
+    \item \textbf{Performance} : Technologies modernes optimisées pour la vitesse
+    \item \textbf{Précision} : Modèle IA spécialisé pour le contexte marocain
+    \item \textbf{Sécurité} : Standards industriels avec Keycloak
+    \item \textbf{Maintenabilité} : Code structuré et documentation automatique
+    \item \textbf{Flexibilité} : Intégration facile avec d'autres systèmes
+\end{itemize}
 
 \section{Conduite du Projet}
 

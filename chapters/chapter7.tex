@@ -188,11 +188,10 @@ Le tableau de bord développé avec Next.js offre une première visualisation de
 Le développement d'une API complète a permis d'exposer les fonctionnalités de classification via des endpoints RESTful :
 
 \begin{itemize}
-    \item \textbf{POST /analyze/batch :} Classification en lot de commentaires pour optimiser les performances
-    \item \textbf{GET /sentiment/results :} Récupération des résultats d'analyse avec pagination et filtres
-    \item \textbf{GET /sentiment/statistics :} Statistiques agrégées des sentiments par période
-    \item \textbf{GET /model/health :} Vérification de l'état et des performances du modèle IA
-    \item \textbf{POST /analyze/single :} Classification instantanée d'un commentaire unique
+    \item \textbf{DELETE /api/fastapi/cache/clear :} Vider le cache de scraping pour forcer une nouvelle collecte
+    \item \textbf{GET /api/fastapi/cache/status :} Vérifier l'état du cache et ses statistiques
+    \item \textbf{POST /api/fastapi/scrape-comments :} Scraper et collecter les commentaires depuis Hespress
+    \item \textbf{POST /api/fastapi/comment-classification :} Classification automatique des sentiments des commentaires
 \end{itemize}
 
 \subsection{Optimisations et Performance du Modèle}
@@ -221,7 +220,12 @@ Le système de classification implémenté présente les caractéristiques suiva
 
 \subsection{Interface de Monitoring et Administration}
 
-\textcolor{red}{[TODO: Ajouter l'image de l'interface d'administration ici]}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{assets/images/admin-ui.png}
+\caption{Interface d'administration pour le monitoring et la gestion du système}
+\label{fig:admin-ui}
+\end{figure}
 Une interface dédiée permet aux administrateurs de surveiller les performances du modèle en temps réel, d'ajuster les paramètres de classification, et de planifier la maintenance préventive du système. Cette interface affiche les métriques de latence, précision et charge du système.
 
 \subsection{Validation et Tests du Modèle}
