@@ -2,7 +2,7 @@
 
 \section{Introduction}
 
-Ce chapitre presente une etude technique detaillee de l'application d'analyse de sentiments basee sur une architecture de microservices moderne. L'architecture est conçue pour assurer une modularite, une evolutivite et une gestion efficace des services distribues. L'application comprend plusieurs composants principaux : un service FastAPI pour l'analyse de sentiments utilisant le modele cardiffnlp/twitter-xlm-roberta-base-sentiment, un frontend Next.js pour l'interface utilisateur, un service Spring Gateway pour la gestion des APIs, un service Keycloak pour l'authentification et l'autorisation, et un module Selenium pour le web scraping automatise des commentaires d'Hespress.
+Ce chapitre presente une etude technique detaillee de l'application d'analyse de sentiments basee sur une architecture de microservices moderne. L'architecture est conçue pour assurer une modularite, une evolutivite et une gestion efficace des services distribues. L'application comprend plusieurs composants principaux : un service FastAPI pour l'analyse de sentiments utilisant le modele cardiffnlp/twitter-xlm-roberta-base-sentiment \cite{10}, un frontend Next.js pour l'interface utilisateur, un service Spring Gateway pour la gestion des APIs, un service Keycloak pour l'authentification et l'autorisation, et un module Selenium pour le web scraping automatise des commentaires d'Hespress.
 
 Cette etude couvre l'architecture des microservices, les technologies utilisees, les interactions entre les services et les choix de conception pour garantir une performance optimale dans le traitement et l'analyse des donnees textuelles en temps reel.
 
@@ -53,7 +53,7 @@ Les services sont deployes de maniere independante, permettant une mise a l'eche
 
 \textbf{Technologie} : FastAPI, Python, Transformers (Hugging Face)
 
-\textbf{Fonctionnalite} : Ce service est le cœur de l'application, responsable du traitement et de l'analyse des sentiments des commentaires collectes. Il utilise le modele pre-entraine cardiffnlp/twitter-xlm-roberta-base-sentiment pour classifier les sentiments en temps reel.
+\textbf{Fonctionnalite} : Ce service est le cœur de l'application, responsable du traitement et de l'analyse des sentiments des commentaires collectes. Il utilise le modele pre-entraine cardiffnlp/twitter-xlm-roberta-base-sentiment \cite{10} pour classifier les sentiments en temps reel.
 
 \textbf{Caracteristiques principales} :
 \begin{itemize}
@@ -197,7 +197,7 @@ La securite est implementee a plusieurs niveaux :
     \item Performance comparable a Node.js et Go
 \end{itemize}
 
-\textbf{Modele d'IA} : cardiffnlp/twitter-xlm-roberta-base-sentiment
+\textbf{Modele d'IA} : cardiffnlp/twitter-xlm-roberta-base-sentiment \cite{10}
 \begin{itemize}
     \item Support multilingue (arabe, français, anglais)
     \item Optimise pour les textes courts (comme les commentaires)
@@ -237,7 +237,7 @@ L'architecture microservices a ete choisie pour plusieurs raisons specifiques au
 
 \subsection{Choix du Modele d'IA}
 
-Le modele cardiffnlp/twitter-xlm-roberta-base-sentiment a ete selectionne pour :
+Le modele cardiffnlp/twitter-xlm-roberta-base-sentiment \cite{10} a ete selectionne pour :
 
 \begin{itemize}
     \item \textbf{Support multilingue} : Capacite a traiter l'arabe, le français et la darija marocaine
